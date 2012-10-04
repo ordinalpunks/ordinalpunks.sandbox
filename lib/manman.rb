@@ -1,4 +1,4 @@
 
-module Mfm
+module Manman
   VERSION = '0.0.1'
 end

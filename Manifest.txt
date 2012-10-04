@@ -2,4 +2,4 @@ History.markdown
 Manifest.txt
 README.markdown
 Rakefile
-lib/mfm.rb
+lib/manman.rb

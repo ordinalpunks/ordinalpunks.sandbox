@@ -1,14 +1,14 @@
 require 'hoe'
-require './lib/mfm.rb'
+require './lib/manman.rb'
 
-Hoe.spec 'mfm' do
+Hoe.spec 'manman' do
   
-  self.version = Mfm::VERSION
+  self.version = Manman::VERSION
   
-  self.summary = 'mfm - Manifest Manager'
+  self.summary = 'manman - Manifest Manager'
   self.description = summary
 
-  self.urls    = ['http://geraldb.github.com/mfm']
+  self.urls    = ['http://geraldb.github.com/manman']
   
   self.author  = 'Gerald Bauer'
   self.email   = 'webslideshow@googlegroups.com'

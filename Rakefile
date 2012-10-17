@@ -1,5 +1,5 @@
 require 'hoe'
-require './lib/manman.rb'
+require './lib/manman/version.rb'
 
 Hoe.spec 'manman' do
   
@@ -12,7 +12,7 @@ Hoe.spec 'manman' do
   
   self.author  = 'Gerald Bauer'
   self.email   = 'webslideshow@googlegroups.com'
-    
+
   # switch extension to .markdown for gihub formatting
   self.readme_file  = 'README.markdown'
   self.history_file = 'History.markdown'

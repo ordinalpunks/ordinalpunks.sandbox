@@ -2,4 +2,8 @@ History.markdown
 Manifest.txt
 README.markdown
 Rakefile
+bin/manman
 lib/manman.rb
+lib/manman/opts.rb
+lib/manman/runner.rb
+lib/manman/version.rb

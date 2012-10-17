@@ -7,7 +7,7 @@ class Opts
   end
   
   def base
-    @base || 'paket'
+    @base || './paket'
   end
 
 

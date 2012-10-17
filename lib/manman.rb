@@ -4,6 +4,9 @@ require 'pp'
 require 'logger'
 require 'optparse'
 require 'fileutils'
+require 'date'
+require 'digest/md5'
+
 
 
 # rubygems

@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+###
+##
+# todo/fix: set filemod to x flag
+
+require 'manman'
+
+Manman.main

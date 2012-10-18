@@ -2,6 +2,22 @@ module Manman
 
 class Opts
 
+  # extra headers for manifest
+  #  - headers get ignored (assumed NOT to be files that get md5 checksum/digest/hash calculated)
+  def headers=(value)
+    # NB: value is supposed to be an array of strings
+    @headers = value
+  end
+
+  ## fix/todo:
+  ##  also make it into a command line option!!
+  
+  def headers
+    # NB: return value is supposed to be an array of strings
+    @headers || []
+  end
+    
+  
   def base=(value)
     @base = value
   end
@@ -54,15 +70,7 @@ class Opts
   def valid
     @valid     # NB: has no default; required arg
   end
-      
  
-  def config_path=(value)
-    @config_path = value
-  end
-  
-  def config_path
-    @config_path || '~/.manman'
-  end
 
 end # class Opts
 

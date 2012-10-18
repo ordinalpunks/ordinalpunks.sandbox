@@ -42,11 +42,6 @@ class Runner
       end
       
       
-      
-      cmd.on( '-c', '--config PATH', "Configuration Path (default is #{opts.config_path})" ) do |path|
-        opts.config_path = path
-      end
-    
       cmd.on( '-v', '--version', "Show version" ) do
         puts Manman.banner
         exit
@@ -79,9 +74,9 @@ EOS
     
     # check for required args
     
-    puts "*** Missing Argument: Release Argument Required"      if opts.release.nil?
-    puts "*** Missing Argument: Environment Argument Required"  if opts.env.nil?
-    puts "*** Missing Argument: Environment Argument Required"  if opts.valid.nil?
+    puts "*** Missing Argument: -r/--release Release Argument Required"   if opts.release.nil?
+    puts "*** Missing Argument: -e/--env Argument Required"               if opts.env.nil?
+    puts "*** Missing Argument: -u/--valid_until Argument Required"       if opts.valid.nil?
      
     if opts.release.nil? || opts.env.nil? || opts.valid.nil?
       puts
@@ -143,17 +138,22 @@ EOS
 
       
       ## special keys (NOT files; do NOT calculate md5 digest)
-      
-      ## todo: make headers configurable
      
-      if [ 'VERSION', 'UMGEBUNG', 'MANDANT', 'GUELTIG_BIS', 'CHECKSUM' ].include?( key )
-        if key == 'VERSION'
+      headers_release = [ 'RELEASE', 'VERSION' ]
+      headers_env     = [ 'ENV', 'UMGEBUNG' ]
+      headers_valid   = [ 'VALID_UNTIL', 'GUELTIG_BIS' ]
+     
+      headers = headers_release + headers_env + headers_valid
+      headers += opts.headers   # add possible user defined extra headers
+     
+      if headers.include?( key )
+        if headers_release.include?( key )
           new_lines << "#{key}: #{opts.release}\n"
-        elsif key == 'UMGEBUNG'
+        elsif headers_env.include?( key )
           new_lines << "#{key}: #{opts.env}\n"
-        elsif key == 'GUELTIG_BIS'
+        elsif headers_valid.include?( key )
           new_lines << "#{key}: #{opts.valid}\n"
-        else
+        else    # assume extra headers
           new_lines << line     ## just pass header line throug; not modified
         end
         next

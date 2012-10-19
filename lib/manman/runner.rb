@@ -76,9 +76,8 @@ EOS
     
     puts "*** Missing Argument: -r/--release Release Argument Required"   if opts.release.nil?
     puts "*** Missing Argument: -e/--env Argument Required"               if opts.env.nil?
-    puts "*** Missing Argument: -u/--valid_until Argument Required"       if opts.valid.nil?
      
-    if opts.release.nil? || opts.env.nil? || opts.valid.nil?
+    if opts.release.nil? || opts.env.nil?
       puts
       puts "Use -h/--help for usage options."
       return    ## exit ??
@@ -112,7 +111,7 @@ EOS
     ### todo/fix: move to template  ???
     header_lines << "####################################################\n"
     header_lines << "# generated on  #{Time.now} using  #{Manman.banner}\n"
-    header_lines << "# - version: #{opts.release}, env: #{opts.env}, valid until: #{opts.valid}\n"
+    header_lines << "# - version: #{opts.release}, env: #{opts.env}\n"
   
     old_lines.each_line do |line|
   

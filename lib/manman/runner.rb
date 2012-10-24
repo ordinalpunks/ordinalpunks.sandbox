@@ -135,14 +135,14 @@ EOS
       key    = tokens[0]
       values = tokens[1]
 
-      
       ## special keys (NOT files; do NOT calculate md5 digest)
      
-      headers_release = [ 'RELEASE', 'VERSION' ]
-      headers_env     = [ 'ENV', 'UMGEBUNG' ]
-      headers_valid   = [ 'VALID_UNTIL', 'GUELTIG_BIS' ]
+      headers_release  = [ 'RELEASE', 'VERSION' ]
+      headers_env      = [ 'ENV', 'UMGEBUNG' ]
+      headers_valid    = [ 'VALID_UNTIL', 'GUELTIG_BIS' ]
+      headers_checksum = [ 'CHECKSUM' ]
      
-      headers = headers_release + headers_env + headers_valid
+      headers = headers_release + headers_env + headers_valid + headers_checksum
       headers += opts.headers   # add possible user defined extra headers
      
       if headers.include?( key )
@@ -152,7 +152,7 @@ EOS
           new_lines << "#{key}: #{opts.env}\n"
         elsif headers_valid.include?( key )
           new_lines << "#{key}: #{opts.valid}\n"
-        else    # assume extra headers
+        else    # assume extra headers or checksum
           new_lines << line     ## just pass header line throug; not modified
         end
         next
@@ -183,14 +183,50 @@ EOS
 
     new_lines = header_lines + new_lines
 
+    # lines all in one string (no array/ary of lines)
+    new_lines_all_in_one = ""
+    new_lines.each do |line|
+      new_lines_all_in_one << line
+    end
+
+    puts "[debug] new_lines_all_in_one:"
+    puts new_lines_all_in_one
+    
+    ## allow custom filters (lets you add custom headers,checksums,etc.)
+    new_lines_all_in_one = filter_callbacks( new_lines_all_in_one )
+
+    ## last step - calculate checksum
+    new_lines_all_in_one = generate_checksum( new_lines_all_in_one )
+    
     File.open( opts.output, 'w') do |f|
-      new_lines.each do |line|
-        f.write( line )
-      end
+      f.write( new_lines_all_in_one )
     end
     
   end # method generate_manifest
 
+
+  def encrypt_callback( text )
+    ## make configurable w/ callback
+    text
+  end
+
+  def filter_callbacks( text )
+    ## make configurabel w/ callbacks (list of callback/0..n)
+    text
+  end
+
+  def generate_checksum( text )
+
+    # NB: remove possible old checksum in checksum line w/ empty line before md5 calculation
+    hash = Digest::MD5.hexdigest( text.gsub( /^CHECKSUM:.*/, '' ) )
+    puts "Paket-Hash >#{hash}<"
+    encrypted_hash = encrypt_callback( hash )
+
+    ## use strip why? why not?
+    ##  was encrypted_hash.strip
+ 
+    text.gsub( /^CHECKSUM:.*/, "CHECKSUM: #{encrypted_hash}" )
+  end
 
   def calc_digest_md5( fn )
     # digest/hash is a string of 20 hexadecimal 8-bit numbers

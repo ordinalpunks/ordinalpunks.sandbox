@@ -11,6 +11,7 @@ Hoe.spec 'manman' do
   self.urls    = ['http://geraldb.github.com/manman']
   
   self.author  = 'Gerald Bauer'
+  self.email   = 'gerald.bauer@example.com'
 
   # switch extension to .markdown for gihub formatting
   self.readme_file  = 'README.markdown'

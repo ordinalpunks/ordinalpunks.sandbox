@@ -7,3 +7,4 @@ lib/manman.rb
 lib/manman/opts.rb
 lib/manman/runner.rb
 lib/manman/version.rb
+lib/manman/worker.rb

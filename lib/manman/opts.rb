@@ -16,6 +16,29 @@ class Opts
     # NB: return value is supposed to be an array of strings
     @headers || []
   end
+  
+  
+  ## NB: for now pass in an obj, that is, self
+  ##   in the future pass in proc? or something else?? to make it more configurable??
+    
+  def filter_callback=(value)
+    @filter = value
+  end
+  
+  def filter_callback
+    @filter    # NB: has no default; returns nil if not set
+  end
+  
+  def encrypt_callback=(value)
+    @encrypt = value
+  end
+  
+  def encrypt_callback
+    @encrypt    # NB: has no default; returns nil if not set
+  end
+  
+  
+  
     
   
   def base=(value)

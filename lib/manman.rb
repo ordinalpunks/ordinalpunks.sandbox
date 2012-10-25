@@ -18,6 +18,7 @@ require 'digest/md5'
 require 'manman/version'
 require 'manman/opts'
 require 'manman/runner'
+require 'manman/worker'
 
 module Manman
 

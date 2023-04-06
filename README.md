@@ -11,7 +11,7 @@ How-tos and sample scripts to generate your own ordinal punk pixel art and more
 
 Generate spritesheet image & (meta)dataset for easy (re)use
 that incl. all archetypes and accessories
-used in 100 ordinal punks collections
+used in 100 ordinal punks collection
 
 ![](i/spritesheet.png)
 

@@ -39,13 +39,20 @@ puts Color.format( Color.parse(  '#536140' ))
 #=>  #536140 / rgb( 83  97  64) - hsl( 85°  20%  32%)
 
 
-palette = gen_palette( '#536140' )
+DOLLAR_PALETTE = gen_palette( '#536140' )
+DOLLAR_FRAME   = Image.read( "./dollar.png" )
+puts "   #{DOLLAR_FRAME.width}x#{DOLLAR_FRAME.height}"
 
 
+def dollarize( punk )
+  ## change to greenback color palette
+  dollar = Image.new( DOLLAR_FRAME.width, DOLLAR_FRAME.height )
+  dollar.compose!( DOLLAR_FRAME )
+  dollar.compose!( punk.change_palette8bit( DOLLAR_PALETTE ), 16, 0 )
+  dollar
+end
 
 
-frame = Image.read( "./dollar.png" )
-puts "   #{frame.width}x#{frame.height}"
 
 
 
@@ -76,9 +83,8 @@ end
 
 
 
-
-composite = ImageComposite.new( 3, 4, width: frame.width+4,
-                                      height: frame.height+4,
+composite = ImageComposite.new( 3, 4, width:  DOLLAR_FRAME.width+4,
+                                      height: DOLLAR_FRAME.height+4,
                                       background: '#000000' )
 
 
@@ -91,22 +97,9 @@ ids.each do |id|
 
   punk = Punk::Image.generate( *attributes )
 
+  dollar = dollarize( punk )
 
-  ## "true color" version
-  dollar = Image.new( frame.width, frame.height )
-  dollar.compose!( frame )
-  dollar.compose!( punk, 16, 0 )
-  dollar.save( "./tmp/dollar-#{id+1}_(2).png" )
-  dollar.zoom(4).save( "./tmp/dollar-#{id+1}_(2)@4x.png" )
-
-  ## change to greenback color palette
-  dollar = Image.new( frame.width, frame.height )
-  dollar.compose!( frame )
-  dollar.compose!( punk.change_palette8bit( palette ), 16, 0 )
-  dollar.save( "./tmp/dollar-#{id+1}.png" )
-  dollar.zoom(4).save( "./tmp/dollar-#{id+1}@4x.png" )
-
-  tile = Image.new( frame.width+4, frame.height+4 )
+  tile = Image.new( DOLLAR_FRAME.width+4, DOLLAR_FRAME.height+4 )
   tile.compose!( dollar, 2, 2 )  ## add 2/2 padding
   composite << tile
 end
@@ -127,9 +120,8 @@ ids.each do |id|
   punk = Punk::Image.generate( *attributes )
 
   ## change to greenback color palette
-  dollar = Image.new( frame.width, frame.height )
-  dollar.compose!( frame )
-  dollar.compose!( punk.change_palette8bit( palette ), 16, 0 )
+  dollar = dollarize( punk )
+
   dollar.save( "./tmp/dollar-#{id+1}.png" )
   dollar.zoom(4).save( "./tmp/dollar-#{id+1}@4x.png" )
   dollar.zoom(8).save( "./tmp/dollar-#{id+1}@8x.png" )

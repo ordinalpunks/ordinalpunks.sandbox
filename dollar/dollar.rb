@@ -116,4 +116,25 @@ composite.save( "./tmp/dollars.png" )
 composite.zoom(4).save( "./tmp/dollars@4x.png" )
 
 
+###
+#  note: ids are off-by-one (starting at zero NOT one), sorry!
+
+ids = [29]
+ids.each do |id|
+  attributes = rec_to_attributes( recs[id] )
+  pp attributes
+
+  punk = Punk::Image.generate( *attributes )
+
+  ## change to greenback color palette
+  dollar = Image.new( frame.width, frame.height )
+  dollar.compose!( frame )
+  dollar.compose!( punk.change_palette8bit( palette ), 16, 0 )
+  dollar.save( "./tmp/dollar-#{id+1}.png" )
+  dollar.zoom(4).save( "./tmp/dollar-#{id+1}@4x.png" )
+  dollar.zoom(8).save( "./tmp/dollar-#{id+1}@8x.png" )
+end
+
+
+
 puts "bye"

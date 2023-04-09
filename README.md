@@ -23,7 +23,7 @@ used in 100 ordinal punks collection
 
 ### /dollar
 
-Turn your ordinal punks into greenback dollar bills. Brrr.......
+Turn your ordinal punks into greenback dollar bills. (Money printer go)  brrr.......
 
 ![](dollar/i/dollars.png)
 

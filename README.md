@@ -13,10 +13,23 @@ Generate spritesheet image & (meta)dataset for easy (re)use
 that incl. all archetypes and accessories
 used in 100 ordinal punks collection
 
-![](i/spritesheet.png)
+![](spritesheet/i/spritesheet.png)
+
+4x
+
+![](spritesheet/i/spritesheet@4x.png)
 
 
 
+### /dollar
+
+Turn your ordinal punks into greenback dollar bills. Brrr.......
+
+![](dollar/i/dollars.png)
+
+4x
+
+![](dollar/i/dollars@4x.png)
 
 
 

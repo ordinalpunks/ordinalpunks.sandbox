@@ -112,7 +112,8 @@ composite.zoom(4).save( "./tmp/dollars@4x.png" )
 ###
 #  note: ids are off-by-one (starting at zero NOT one), sorry!
 
-ids = [29, 92]
+# ids = [29, 45, 54, 65, 69, 77, 92, 94]
+ids = (0..99)
 ids.each do |id|
   attributes = rec_to_attributes( recs[id] )
   pp attributes
@@ -124,7 +125,7 @@ ids.each do |id|
 
   dollar.save( "./tmp/dollar-#{id+1}.png" )
   dollar.zoom(4).save( "./tmp/dollar-#{id+1}@4x.png" )
-  dollar.zoom(8).save( "./tmp/dollar-#{id+1}@8x.png" )
+  ## dollar.zoom(8).save( "./tmp/dollar-#{id+1}@8x.png" )
 end
 
 

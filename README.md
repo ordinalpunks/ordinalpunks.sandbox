@@ -33,6 +33,18 @@ Turn your ordinal punks into greenback dollar bills. (Money printer go)  brrr...
 
 
 
+### /gold
+
+Turn your "vanilla" ordinal punks into all golden ordinal punks ...
+
+
+![](gold/i/golden.png)
+
+4x
+
+![](gold/i/golden@4x.png)
+
+
 
 
 ## Questions? Comments?

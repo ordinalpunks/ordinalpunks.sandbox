@@ -145,6 +145,9 @@ ids.each do |id|
 
   gold = golden( *attributes )
 
+  gold.save( "./tmp/golden-#{id+1}.png" )
+  gold.zoom(4).save( "./tmp/golden-#{id+1}@4x.png" )
+
   composite << gold
 end
 

@@ -45,6 +45,17 @@ Turn your "vanilla" ordinal punks into all golden ordinal punks ...
 ![](gold/i/golden@4x.png)
 
 
+### /punkettes
+
+Turn your "vanilla" ordinal punks into an extraordinal all-women punk / all punkette edition...
+
+![](punkettes/i/punkettes.png)
+
+4x
+
+![](punkettes/i/punkettes@4x.png)
+
+
 
 
 ## Questions? Comments?

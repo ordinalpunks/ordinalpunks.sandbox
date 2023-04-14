@@ -60,11 +60,11 @@ Turn your "vanilla" ordinal punks into an extraordinal all-women punk / all punk
 
 Turn your "vanilla" ordinal punks into an all-men punk edition...
 
-![](punkettes/i/men.png)
+![](men/i/men.png)
 
 4x
 
-![](punkettes/i/men@4x.png)
+![](men/i/men@4x.png)
 
 
 

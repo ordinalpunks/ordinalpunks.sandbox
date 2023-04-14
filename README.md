@@ -15,9 +15,13 @@ used in 100 ordinal punks collection
 
 ![](spritesheet/i/spritesheet.png)
 
-4x
+<details>
+<summary markdown="1">4x</summary>
 
 ![](spritesheet/i/spritesheet@4x.png)
+
+</details>
+
 
 
 

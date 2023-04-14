@@ -35,7 +35,7 @@ Turn your ordinal punks into greenback dollar bills. (Money printer go)  brrr...
 
 ### /gold
 
-Turn your "vanilla" ordinal punks into all golden ordinal punks ...
+Turn your "classic" ordinal punks into all golden ordinal punks ...
 
 
 ![](gold/i/golden.png)
@@ -47,7 +47,7 @@ Turn your "vanilla" ordinal punks into all golden ordinal punks ...
 
 ### /punkettes
 
-Turn your "vanilla" ordinal punks into an extraordinal all-women punk / all punkette edition...
+Turn your "classic" ordinal punks into an extraordinal all-women punk / all punkette edition...
 
 ![](punkettes/i/punkettes.png)
 
@@ -58,7 +58,7 @@ Turn your "vanilla" ordinal punks into an extraordinal all-women punk / all punk
 
 ### /men
 
-Turn your "vanilla" ordinal punks into an all-men punk edition...
+Turn your "classic" ordinal punks into an all-men punk edition...
 
 ![](men/i/men.png)
 
@@ -66,6 +66,19 @@ Turn your "vanilla" ordinal punks into an all-men punk edition...
 
 ![](men/i/men@4x.png)
 
+
+### /humans
+
+Turn your "classic" ordinal punks into an all-human punk edition -
+using the (dr. ellis) monk¹ skin tones (01/02/03/04/05/06/07/08/09/10)...
+
+![](humans/i/humans.png)
+
+4x
+
+![](humans/i/humans@4x.png)
+
+¹: See [Skin Tone Research @ Google A.I.](https://skintone.google/) for background reading.
 
 
 

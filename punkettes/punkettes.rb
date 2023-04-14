@@ -95,6 +95,9 @@ ids.each do |id|
 
   punk = Punk::Image.generate( *attributes, patch: PUNKETTE_PATCH )
 
+  punk.save( "./tmp/punkette-#{id+1}.png" )
+  punk.zoom(4).save( "./tmp/punkette-#{id+1}@4x.png" )
+
   composite << punk
 end
 

@@ -31,9 +31,12 @@ Turn your ordinal punks into greenback dollar bills. (Money printer go)  brrr...
 
 ![](dollar/i/dollars.png)
 
-4x
+<details>
+<summary markdown="1">4x</summary>
 
 ![](dollar/i/dollars@4x.png)
+
+</details>
 
 
 

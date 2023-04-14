@@ -47,9 +47,14 @@ Turn your "classic" ordinal punks into all golden ordinal punks ...
 
 ![](gold/i/golden.png)
 
-4x
+
+<details>
+<summary markdown="1">4x</summary>
 
 ![](gold/i/golden@4x.png)
+
+</details>
+
 
 
 ### /punkettes
@@ -58,9 +63,13 @@ Turn your "classic" ordinal punks into an extraordinal all-women punk / all punk
 
 ![](punkettes/i/punkettes.png)
 
-4x
+<details>
+<summary markdown="1">4x</summary>
 
 ![](punkettes/i/punkettes@4x.png)
+
+</details>
+
 
 
 ### /men
@@ -69,9 +78,13 @@ Turn your "classic" ordinal punks into an all-men punk edition...
 
 ![](men/i/men.png)
 
-4x
+<details>
+<summary markdown="1">4x</summary>
 
 ![](men/i/men@4x.png)
+
+</details>
+
 
 
 ### /humans
@@ -81,9 +94,13 @@ using the (dr. ellis) monk¹ skin tones (01/02/03/04/05/06/07/08/09/10)...
 
 ![](humans/i/humans.png)
 
-4x
+<details>
+<summary markdown="1">4x</summary>
 
 ![](humans/i/humans@4x.png)
+
+</details>
+
 
 ¹: See [Skin Tone Research @ Google A.I.](https://skintone.google/) for background reading.
 

@@ -106,6 +106,21 @@ using the (dr. ellis) monk¹ skin tones (01/02/03/04/05/06/07/08/09/10)...
 
 
 
+### /orangepill
+
+Turn your "classic" ordinal punks into an all orange pill(ed) edition...
+
+![](orangepill/i/orangepilled.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](orangepill/i/orangepilled@4x.png)
+
+</details>
+
+
+
 
 
 ## Questions? Comments?

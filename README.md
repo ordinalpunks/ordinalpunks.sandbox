@@ -155,6 +155,20 @@ Turn your "classic" ordinal punks into gold/silver/bronze coins...
 
 
 
+### /bluechip
+
+Turn your "classic" ordinal punks into blue (poker) chips...
+
+![](bluechip/i/bluechips.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](bluechip/i/bluechips@4x.png)
+
+</details>
+
+
 
 
 ## Questions? Comments?

@@ -120,6 +120,19 @@ Turn your "classic" ordinal punks into an all orange pill(ed) edition...
 </details>
 
 
+### /coins
+
+Turn your "classic" ordinal punks into gold/silver/bronze coins...
+
+![](coins/i/goldcoins.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](coins/i/goldcoins@4x.png)
+
+</details>
+
 
 
 

@@ -34,7 +34,7 @@ end
 
 
 
-CHIP_BASE    =   Color.from_hex( '#2E358D' )
+CHIP_BASE    =   Color.from_hex( '#371BA8' )
 CHIP_PALETTE =   gen_palette(  CHIP_BASE )
 
 img = ImagePalette8bit.new( CHIP_PALETTE, size: 4 )

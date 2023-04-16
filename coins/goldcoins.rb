@@ -32,14 +32,18 @@ img.zoom(2).save( "tmp/palette_goldx2.png" )
 
 
 COIN_FRAME   = Image.read( "./goldcoin-32x32.png" )
+COIN_FRAME_FRONT   = Image.read( "./goldcoin-32x32-front.png" )
+COIN_FRAME_BACK    = Image.read( "./goldcoin-32x32-back.png" )
+
 puts "   #{COIN_FRAME.width}x#{COIN_FRAME.height}"
 
 
 def mint( punk )
   ## change to coin color palette
   coin = Image.new( 32, 32 )
-  coin.compose!( COIN_FRAME )
+  coin.compose!( COIN_FRAME_BACK )
   coin.compose!( punk.change_palette8bit( COIN_PALETTE ), 5, 3 )
+  coin.compose!( COIN_FRAME_FRONT )
   coin
 end
 

@@ -144,6 +144,16 @@ Turn your "classic" ordinal punks into gold/silver/bronze coins...
 </details>
 
 
+![](coins/i/bronzecoins.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](coins/i/bronzecoins@4x.png)
+
+</details>
+
+
 
 
 

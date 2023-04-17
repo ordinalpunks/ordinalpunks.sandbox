@@ -2,7 +2,7 @@ require 'punks'
 
 
 require_relative '../utils/colors'    ## incl. dump_colors, etc.
-
+require_relative '../utils/make'
 
 
 BITCOIN_ORANGE = Color.from_hex( '#f7931a' )
@@ -19,31 +19,11 @@ colors = {
 }
 
 
-
-base_m = Punks::Sheet.find_by( name: 'Robot' )
-base_f = Punks::Sheet.find_by( name: 'Robot Female' )
-
-base_m.zoom.save( "./tmp/robot-male.png" )
-base_m.zoom( 8 ).save( "./tmp/robot-male@8x.png" )
-
-base_f.zoom.save( "./tmp/robot-female.png" )
-base_f.zoom( 8 ).save( "./tmp/robot-female@8x.png" )
-
-
-dump_colors( base_m )
-puts "---"
-dump_colors( base_f )
-
-
 colors.each do |name, color|
-  color_map = derive_robot_color_map( color )
-  punk_m = base_m.change_colors( color_map )
+  punk_m, punk_f = make_robots( color )
 
   punk_m.save( "./tmp/robot-male_#{name}.png" )
   punk_m.zoom(4).save( "./tmp/robot-male_#{name}@4x.png" )
-
-
-  punk_f = base_f.change_colors( color_map )
 
   punk_f.save( "./tmp/robot-female_#{name}.png" )
   punk_f.zoom(4).save( "./tmp/robot-female_#{name}@4x.png" )
@@ -53,32 +33,11 @@ end
 ###
 #  vampire
 
-base_m = Punks::Sheet.find_by( name: 'Vampire' )
-base_f = Punks::Sheet.find_by( name: 'Vampire Female' )
-
-base_m.zoom.save( "./tmp/vampire-male.png" )
-base_m.zoom( 8 ).save( "./tmp/vampire-male@8x.png" )
-
-base_f.zoom.save( "./tmp/vampire-female.png" )
-base_f.zoom( 8 ).save( "./tmp/vampire-female@8x.png" )
-
-
-dump_colors( base_m )
-puts "---"
-dump_colors( base_f )
-
-
-
-
 colors.each do |name, color|
-  color_map = derive_vampire_color_map( color )
-  punk_m = base_m.change_colors( color_map )
+  punk_m, punk_f = make_vampires( color )
 
   punk_m.save( "./tmp/vampire-male_#{name}.png" )
   punk_m.zoom(4).save( "./tmp/vampire-male_#{name}@4x.png" )
-
-
-  punk_f = base_f.change_colors( color_map )
 
   punk_f.save( "./tmp/vampire-female_#{name}.png" )
   punk_f.zoom(4).save( "./tmp/vampire-female_#{name}@4x.png" )

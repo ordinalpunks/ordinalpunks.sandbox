@@ -16,5 +16,7 @@ end
 
 require_relative 'make_robots'
 require_relative 'make_vampires'
+require_relative 'make_orcs'
+require_relative 'make_mummies'
 
 

@@ -9,65 +9,74 @@ require 'punks'
 ##
 #  more new golden archetypes & attributes
 GOLDEN_PATCH = {
-  'robotmalegold1'   =>  Image.read( './robot-male_gold_1.png'),
-  'robotfemalegold1' =>  Image.read( './robot-female_gold_1.png'),
+  'robotmalegold1'   =>  Image.read( './more/robot-male_gold_1.png'),
+  'robotfemalegold1' =>  Image.read( './more/robot-female_gold_1.png'),
 
-  'vampiremalegold1'   =>  Image.read( './vampire-male_gold_1.png'),
-  'vampirefemalegold1' =>  Image.read( './vampire-female_gold_1.png'),
+  'vampiremalegold1'   =>  Image.read( './more/vampire-male_gold_1.png'),
+  'vampirefemalegold1' =>  Image.read( './more/vampire-female_gold_1.png'),
 
-  'orcmalegold1'   =>  Image.read( './orc-male_gold_1.png'),
-  'orcfemalegold1' =>  Image.read( './orc-female_gold_1.png'),
-  'orcmalegold3'   =>  Image.read( './orc-male_gold_3.png'),
-  'orcfemalegold3' =>  Image.read( './orc-female_gold_3.png'),
+  'orcmalegold1'   =>  Image.read( './more/orc-male_gold_1.png'),
+  'orcfemalegold1' =>  Image.read( './more/orc-female_gold_1.png'),
+  'orcmalegold3'   =>  Image.read( './more/orc-male_gold_3.png'),
+  'orcfemalegold3' =>  Image.read( './more/orc-female_gold_3.png'),
 
-  'mummymalegold1'   =>  Image.read( './mummy-male_gold_1.png'),
-  'mummyfemalegold1' =>  Image.read( './mummy-female_gold_1.png'),
+  'mummymalegold1'   =>  Image.read( './more/mummy-male_gold_1.png'),
+  'mummyfemalegold1' =>  Image.read( './more/mummy-female_gold_1.png'),
 }
 
 
+
 GOLDEN = {
-  'Human Male 1'   => 'Male Gold 1',
-  'Human Male 2'   => 'Male Gold 1',
-  'Human Male 3'   => 'Male Gold 1',
-  'Human Male 4'   => 'Male Yellow',
+  'Human Male 1'      => 'Male Gold 1',
+  'Human Male 2'      => 'Male Gold 1',
+  'Human Male 3'      => 'Male Gold 1',
+  'Human Male 4'      => 'Male Gold 1',
   'Human Male Orange' => 'Male Gold 1',
-  'Human Male Blue'  => 'Male Gold 1',
+  'Human Male Blue'   => 'Male Gold 1',
+  'Human Male Gold'   => 'Male Gold 1',
 
   'Human Female 1' => 'Female Gold 1',
   'Human Female 2' => 'Female Gold 1',
   'Human Female 3' => 'Female Gold 1',
-  'Human Female 4' => 'Female Yellow',
+  'Human Female 4' => 'Female Gold 1',
   'Human Female Orange' => 'Female Gold 1',
   'Human Female Purple' => 'Female Gold 1',
   'Human Female Blue'  => 'Female Gold 1',
+  'Human Female Gold'  => 'Female Gold 1',
+  'Human Female Yellow'=> 'Female Gold 1',
 
   'Zombie Male'    => 'Zombie Gold 1',
   'Zombie Female'  => 'Zombie Female Gold 1',
   'Ape Male'       => 'Ape Gold 1',
   'Ape Male Blue'  =>  'Ape Gold 1',
+  'Ape Male Gold'  =>  'Ape Gold 1',
   'Ape Female'    => 'Ape Female Gold 1',
+
   'Alien Male'        => 'Alien Gold 1',
   'Alien Male Green'  => 'Alien Gold 1',
+  'Alien Male Gold'   => 'Alien Gold 1',
+  'Alien Male Yellow' => 'Alien Gold 1',
+
   'Alien Female Red Magenta' => 'Alien Female Gold 1',
   'Alien Female Violet' => 'Alien Female Gold 1',
   'Alien Ape Male' => 'Alien Ape Yellow',
 
-  "Demon Male"     =>  'Demon Gold 1',
+  'Demon Male'     =>  'Demon Gold 1',
   'Demon Female'   =>  'Demon Female Gold 1',
 
   'Skeleton Male'  =>  'Skeleton Gold 1',
   'Skeleton Female'  =>  'Skeleton Female Gold 1',
 
-  "Robot Male"     =>  'Robot Male Gold 1',
+  'Robot Male'     =>  'Robot Male Gold 1',
   'Robot Female'   =>  'Robot Female Gold 1',
 
-  "Vampire Male"     =>  'Vampire Male Gold 1',
+  'Vampire Male'     =>  'Vampire Male Gold 1',
   'Vampire Female'   =>  'Vampire Female Gold 1',
 
-  "Orc Male"     =>  'Orc Male Gold 3',
+  'Orc Male'     =>  'Orc Male Gold 3',
   'Orc Female'   =>  'Orc Female Gold 3',
 
-  "Mummy Male"     =>  'Mummy Male Gold 1',
+  'Mummy Male'     =>  'Mummy Male Gold 1',
   'Mummy Female'   =>  'Mummy Female Gold 1',
 
   'Zombie Ape Male'  => 'Ape Male Gold 1',   ## for now simple ape (NOT ape zombie)
@@ -85,8 +94,7 @@ def golden( *attributes )
 
   if base_golden.nil?
     puts "!! WARN - >#{attributes[0]}< no golden base type mapping found; sorry"
-    MISSING[ attributes[0] ] +=1  unless attributes[0].index('Gold') ||
-                                         attributes[0].index('Yellow')
+    MISSING[ attributes[0] ] +=1
     base_golden = attributes[0]
   else
     puts "==> bingo!  >#{attributes[0]}< mapping to >#{base_golden}<..."
@@ -112,7 +120,7 @@ end
 
 ####
 #  read in ordinals metadata
-recs = read_csv( "../../ordinalpunks.starter/ordinalpunks.csv" )
+recs = read_csv( "../ordinalpunks_v2.csv" )
 puts "    #{recs.size} record(s)"
 
 

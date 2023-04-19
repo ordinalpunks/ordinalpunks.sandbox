@@ -9,35 +9,35 @@ require 'punks'
 ##
 #  more new orange pill archetypes & attributes
 ORANGEPILL_PATCH = {
-  'maleorange'   =>  Image.read( './male_orange.png'),
-  'femaleorange' =>  Image.read( './female_orange.png'),
+  'maleorange'   =>  Image.read( './more/male_orange.png'),
+  'femaleorange' =>  Image.read( './more/female_orange.png'),
 
-  'zombiemaleorange'   =>  Image.read( './zombie-male_orange.png'),
-  'zombiefemaleorange' =>  Image.read( './zombie-female_orange.png'),
+  'zombiemaleorange'   =>  Image.read( './more/zombie-male_orange.png'),
+  'zombiefemaleorange' =>  Image.read( './more/zombie-female_orange.png'),
 
-  'apemaleorange'   =>  Image.read( './ape-male_orange.png'),
-  'apefemaleorange' =>  Image.read( './ape-female_orange.png'),
+  'apemaleorange'   =>  Image.read( './more/ape-male_orange.png'),
+  'apefemaleorange' =>  Image.read( './more/ape-female_orange.png'),
 
-  'alienmaleorange'   =>  Image.read( './alien-male_orange.png'),
-  'alienfemaleorange' =>  Image.read( './alien-female_orange.png'),
+  'alienmaleorange'   =>  Image.read( './more/alien-male_orange.png'),
+  'alienfemaleorange' =>  Image.read( './more/alien-female_orange.png'),
 
-  'robotmaleorange'   =>  Image.read( './robot-male_orange.png'),
-  'robotfemaleorange' =>  Image.read( './robot-female_orange.png'),
+  'robotmaleorange'   =>  Image.read( './more/robot-male_orange.png'),
+  'robotfemaleorange' =>  Image.read( './more/robot-female_orange.png'),
 
-  'vampiremaleorange'   =>  Image.read( './vampire-male_orange.png'),
-  'vampirefemaleorange' =>  Image.read( './vampire-female_orange.png'),
+  'vampiremaleorange'   =>  Image.read( './more/vampire-male_orange.png'),
+  'vampirefemaleorange' =>  Image.read( './more/vampire-female_orange.png'),
 
-  'demonmaleorange'   =>  Image.read( './demon-male_orange.png'),
-  'demonfemaleorange' =>  Image.read( './demon-female_orange.png'),
+  'demonmaleorange'   =>  Image.read( './more/demon-male_orange.png'),
+  'demonfemaleorange' =>  Image.read( './more/demon-female_orange.png'),
 
-  'orcmaleorange'   =>  Image.read( './orc-male_orange.png'),
-  'orcfemaleorange' =>  Image.read( './orc-female_orange.png'),
+  'orcmaleorange'   =>  Image.read( './more/orc-male_orange.png'),
+  'orcfemaleorange' =>  Image.read( './more/orc-female_orange.png'),
 
-  'skeletonmaleorange'   =>  Image.read( './skeleton-male_orange.png'),
-  'skeletonfemaleorange' =>  Image.read( './skeleton-female_orange.png'),
+  'skeletonmaleorange'   =>  Image.read( './more/skeleton-male_orange.png'),
+  'skeletonfemaleorange' =>  Image.read( './more/skeleton-female_orange.png'),
 
-  'mummymaleorange'   =>  Image.read( './mummy-male_orange.png'),
-  'mummyfemaleorange' =>  Image.read( './mummy-female_orange.png'),
+  'mummymaleorange'   =>  Image.read( './more/mummy-male_orange.png'),
+  'mummyfemaleorange' =>  Image.read( './more/mummy-female_orange.png'),
 }
 
 
@@ -136,7 +136,7 @@ end
 
 ####
 #  read in ordinals metadata
-recs = read_csv( "../../ordinalpunks.starter/ordinalpunks.csv" )
+recs = read_csv( "../ordinalpunks_v2.csv" )
 puts "    #{recs.size} record(s)"
 
 

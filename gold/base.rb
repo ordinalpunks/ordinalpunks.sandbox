@@ -24,10 +24,10 @@ colors = {
 }
 
 
-#####
-# robots
 
 colors.each do |name, color|
+  #####
+  # robots
   punk_m, punk_f = make_robots( color )
 
   punk_m.save( "./tmp/robot-male_#{name}.png" )
@@ -35,14 +35,10 @@ colors.each do |name, color|
 
   punk_f.save( "./tmp/robot-female_#{name}.png" )
   punk_f.zoom(4).save( "./tmp/robot-female_#{name}@4x.png" )
-end
 
 
-
-###
-#  vampire
-
-colors.each do |name, color|
+  ###
+  #  vampire
   punk_m, punk_f = make_vampires( color )
 
   punk_m.save( "./tmp/vampire-male_#{name}.png" )
@@ -50,14 +46,9 @@ colors.each do |name, color|
 
   punk_f.save( "./tmp/vampire-female_#{name}.png" )
   punk_f.zoom(4).save( "./tmp/vampire-female_#{name}@4x.png" )
-end
 
-
-
-###
-#  orc
-
-colors.each do |name, color|
+  ###
+  #  orc
   punk_m, punk_f = make_orcs( color )
 
   punk_m.save( "./tmp/orc-male_#{name}.png" )
@@ -65,14 +56,9 @@ colors.each do |name, color|
 
   punk_f.save( "./tmp/orc-female_#{name}.png" )
   punk_f.zoom(4).save( "./tmp/orc-female_#{name}@4x.png" )
-end
 
-
-
-###
-#  mummy
-
-colors.each do |name, color|
+  ###
+  #  mummy
   punk_m, punk_f = make_mummies( color )
 
   punk_m.save( "./tmp/mummy-male_#{name}.png" )
@@ -81,6 +67,9 @@ colors.each do |name, color|
   punk_f.save( "./tmp/mummy-female_#{name}.png" )
   punk_f.zoom(4).save( "./tmp/mummy-female_#{name}@4x.png" )
 end
+
+
+
 
 
 puts "bye"

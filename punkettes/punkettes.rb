@@ -10,9 +10,9 @@ require 'punks'
 ##
 #  more new punkette archetypes & attributes
 PUNKETTE_PATCH = {
-  'apefemaleblue'     =>  Image.read( './ape-female-blue.png'),
-  'zombieapefemale'   =>  Image.read( './zombie-ape-female.png'),
-  'alienapefemale'    =>  Image.read( './alien-ape-female.png'),
+  'apefemaleblue'     =>  Image.read( './more/ape-female-blue.png'),
+  'zombieapefemale'   =>  Image.read( './more/zombie-ape-female.png'),
+  'alienapefemale'    =>  Image.read( './more/alien-ape-female.png'),
 }
 
 
@@ -38,13 +38,6 @@ def convert_to_punkette( *attributes )
     ## note: remove all beard (facial hair) + buck teeth attributes
     next if EXCLUDE.include?( attribute )
 
-    attribute = 'Cowboy Hat'   if attribute == 'Cowboy Hat B & W'
-    attribute = 'Beanie'       if attribute == 'Beanie B & W'
-    attribute = 'Police Cap'   if attribute == 'Police Cap B & W'
-    attribute = '3D Glasses'   if attribute == '3D Glasses B & W'
-    attribute = 'Fedora'       if attribute == 'Fedora B & W'
-    attribute = 'Cap Forward'  if attribute == 'Cap Forward B & W'
-
     attributes_new << attribute
   end
 
@@ -56,7 +49,7 @@ end
 
 ####
 #  read in ordinals metadata
-recs = read_csv( "../../ordinalpunks.starter/ordinalpunks.csv" )
+recs = read_csv( "../ordinalpunks_v2.csv" )
 puts "    #{recs.size} record(s)"
 
 

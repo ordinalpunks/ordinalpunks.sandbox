@@ -7,7 +7,25 @@
 require 'punks'
 
 
-EXCLUDE = ['Choker', 'Black Lipstick', 'Blue Eyeshadow', 'Green Eye Shadow']
+
+##
+#  more new men archetypes & attributes
+MEN_PATCH = {
+ 'blondebob'     => Image.read( './more/m/blondebob.png' ),
+ 'blondeshort'   => Image.read( './more/m/blondeshort.png' ),
+ 'choker'        => Image.read( './more/m/choker.png' ),
+ 'darkhair'      => Image.read( './more/m/darkhair.png' ),
+ 'pilothelmet'   => Image.read( './more/m/pilothelmet.png' ),
+ 'tiara'         => Image.read( './more/m/tiara.png' ),
+ 'wildwhitehair' => Image.read( './more/m/wildwhitehair.png' ),
+}
+
+
+
+
+
+EXCLUDE = ['Black Lipstick',
+           'Blue Eyeshadow', 'Green Eye Shadow']
 
 
 
@@ -19,16 +37,9 @@ def convert_to_punk( *attributes )
     ## note: remove attributes (not available in male version)
     next if EXCLUDE.include?( attribute )
 
-    attribute = 'Big Hair White'    if attribute == 'Wild White Hair'
-    attribute = 'Big Hair Blonde'    if attribute == 'Blonde Bob'
-    attribute = 'Blonde Afro'       if attribute == 'Blonde Short'
-    attribute = 'Big Hair Black'       if attribute == 'Dark Hair'
 
-
-    attribute = 'Wizard Hat'        if attribute == 'Flowers'
-    attribute = 'Boater'            if attribute == 'Pilot Helmet'
-    attribute = 'Top Hat'           if attribute == 'Bow'
-    attribute = 'Headband'          if attribute == 'Tiara'
+    attribute = 'Boater'            if attribute == 'Flowers'
+    attribute = 'Headband'           if attribute == 'Bow'
 
 
     attributes_new << attribute
@@ -42,7 +53,7 @@ end
 
 ####
 #  read in ordinals metadata
-recs = read_csv( "../../ordinalpunks.starter/ordinalpunks.csv" )
+recs = read_csv( "../ordinalpunks_v2.csv" )
 puts "    #{recs.size} record(s)"
 
 
@@ -79,7 +90,7 @@ ids.each do |id|
   attributes = rec_to_attributes( recs[id] )
   pp attributes
 
-  punk = Punk::Image.generate( *attributes )
+  punk = Punk::Image.generate( *attributes, patch: MEN_PATCH )
 
   punk.save( "./tmp/man-#{id+1}.png" )
   punk.zoom(4).save( "./tmp/man-#{id+1}@4x.png" )

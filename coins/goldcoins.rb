@@ -54,7 +54,7 @@ end
 
 ####
 #  read in ordinals metadata
-recs = read_csv( "../../ordinalpunks.starter/ordinalpunks.csv" )
+recs = read_csv( "../ordinalpunks_v2.csv" )
 puts "    #{recs.size} record(s)"
 
 

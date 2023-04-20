@@ -1,0 +1,7 @@
+CHANGELOG.md
+Manifest.txt
+README.md
+Rakefile
+lib/punkmaker.rb
+lib/punkmaker/human.rb
+lib/punkmaker/mummy.rb

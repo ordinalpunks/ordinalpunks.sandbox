@@ -10,6 +10,7 @@ require 'punkmaker'
 require_relative 'punkart/version'   # let versoin go first
 require_relative 'punkart/dollar'
 require_relative 'punkart/goldcoin'
+require_relative 'punkart/silvercoin'
 
 
 module Pixelart
@@ -21,6 +22,7 @@ alias_method :dollar,    :greenback
 alias_method :dollarize, :greenback
 
 def goldcoin()  Goldcoin.mint( self ); end
+def silvercoin()  Silvercoin.mint( self ); end
 
 
 end # class Image

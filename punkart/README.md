@@ -84,6 +84,10 @@ specs.each_with_index do |attributes, i|
    coin = punk.goldcoin  ## turn into goldcoin
    coin.save( "goldcoin-#{i+1}.png" )
    coin.zoom(4).save( "goldcoin-#{i+1}@4x.png" )
+
+   coin = punk.silvercoin  ## turn into silvercoin
+   coin.save( "silvercoin-#{i+1}.png" )
+   coin.zoom(4).save( "silvercoin-#{i+1}@4x.png" )
 end
 ```
 
@@ -97,6 +101,15 @@ Voila!
 ![](i/goldcoin-5.png)
 ![](i/goldcoin-6.png)
 
+![](i/silvercoin-1.png)
+![](i/silvercoin-2.png)
+![](i/silvercoin-3.png)
+![](i/silvercoin-4.png)
+![](i/silvercoin-5.png)
+![](i/silvercoin-6.png)
+
+
+
 4x
 
 ![](i/goldcoin-1@4x.png)
@@ -106,6 +119,12 @@ Voila!
 ![](i/goldcoin-5@4x.png)
 ![](i/goldcoin-6@4x.png)
 
+![](i/silvercoin-1@4x.png)
+![](i/silvercoin-2@4x.png)
+![](i/silvercoin-3@4x.png)
+![](i/silvercoin-4@4x.png)
+![](i/silvercoin-5@4x.png)
+![](i/silvercoin-6@4x.png)
 
 
 

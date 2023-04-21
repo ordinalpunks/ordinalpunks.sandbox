@@ -73,6 +73,44 @@ turns into
 
 
 
+### `Image#goldcoin` or `silvercoin` or `bronzecoin`
+
+Let's continue and let's mint gold/silver/bronze coins...
+
+``` ruby
+specs.each_with_index do |attributes, i|
+   punk = Punk::Image.generate( *attributes )
+
+   coin = punk.goldcoin  ## turn into goldcoin
+   coin.save( "goldcoin-#{i+1}.png" )
+   coin.zoom(4).save( "goldcoin-#{i+1}@4x.png" )
+end
+```
+
+
+Voila!
+
+![](i/goldcoin-1.png)
+![](i/goldcoin-2.png)
+![](i/goldcoin-3.png)
+![](i/goldcoin-4.png)
+![](i/goldcoin-5.png)
+![](i/goldcoin-6.png)
+
+4x
+
+![](i/goldcoin-1@4x.png)
+![](i/goldcoin-2@4x.png)
+![](i/goldcoin-3@4x.png)
+![](i/goldcoin-4@4x.png)
+![](i/goldcoin-5@4x.png)
+![](i/goldcoin-6@4x.png)
+
+
+
+
+
+That's it.
 
 
 ## License

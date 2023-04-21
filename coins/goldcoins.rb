@@ -93,6 +93,7 @@ ids.each do |id|
 
   coin = mint( punk )
 
+
   tile = Image.new( 32+4, 32+4 )
   tile.compose!( coin, 2, 2 )  ## add 2/2 padding
   composite << tile
@@ -101,6 +102,20 @@ end
 
 composite.save( "./tmp/goldcoins.png" )
 composite.zoom(4).save( "./tmp/goldcoins@4x.png" )
+
+
+ids = (0..99)
+ids.each do |id|
+  attributes = rec_to_attributes( recs[id] )
+  pp attributes
+
+  punk = Punk::Image.generate( *attributes )
+
+  coin = mint( punk )
+
+  coin.save( "./i/goldcoin-#{id+1}.png" )
+  coin.zoom(4).save( "./i/goldcoin-#{id+1}@4x.png" )
+end
 
 
 puts "bye"

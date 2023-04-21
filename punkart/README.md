@@ -1,0 +1,88 @@
+# punk art
+
+punkart gem - (automagically) turn your "classic" punk (pixel) heads into dollar greenbacks,
+gold/silver/bronze coins, and much more
+
+
+
+* home  :: [github.com/cryptopunksnotdead/cryptopunks](https://github.com/cryptopunksnotdead/cryptopunks)
+* bugs  :: [github.com/cryptopunksnotdead/cryptopunks/issues](https://github.com/cryptopunksnotdead/cryptopunks/issues)
+* gem   :: [rubygems.org/gems/punkart](https://rubygems.org/gems/punkart)
+* rdoc  :: [rubydoc.info/gems/punkart](http://rubydoc.info/gems/punkart)
+
+
+
+
+## Usage
+
+
+### `Image#greenback` (also known as `dollar`, `dollarize`)
+
+
+
+Let's print dollar greenbacks... brrr...
+
+``` ruby
+require 'punkart'
+
+specs = [
+  ['Robot Male', 'Big Beard'],
+  ['Human Male 2', 'Birthday Hat', 'Bubble Gum'],
+  ['Human Female 1', 'Dark Hair', 'Flowers', 'Frown', 'Gold Chain'],
+  ['Demon Male',     'Hoodie', 'Pipe'],
+  ['Ape Male Blue',  'Bandana', 'Earring'],
+  ['Human Male 3',  'Cowboy Hat', 'Smile', 'Laser Eyes'],
+]
+
+specs.each_with_index do |attributes, i|
+   punk = Punk::Image.generate( *attributes )
+
+   dollar = punk.greenback  ## turn into greenback dollar
+   dollar.save( "dollar-#{i+1}.png" )
+   dollar.zoom(4).save( "dollar-#{i+1}@4x.png" )
+end
+```
+
+
+Voila!
+
+![](i/punk-1.png)
+![](i/punk-2.png)
+![](i/punk-3.png)
+![](i/punk-4.png)
+![](i/punk-5.png)
+![](i/punk-6.png)
+
+turns into
+
+![](i/dollar-1.png)
+![](i/dollar-2.png)
+![](i/dollar-3.png)
+![](i/dollar-4.png)
+![](i/dollar-5.png)
+![](i/dollar-6.png)
+
+4x
+
+![](i/dollar-1@4x.png)
+![](i/dollar-2@4x.png)
+![](i/dollar-3@4x.png)
+![](i/dollar-4@4x.png)
+![](i/dollar-5@4x.png)
+![](i/dollar-6@4x.png)
+
+
+
+
+
+## License
+
+The scripts are dedicated to the public domain.
+Use it as you please with no restrictions whatsoever.
+
+
+## Questions? Comments?
+
+Post them over at the [Help & Support](https://github.com/geraldb/help) page. Thanks.
+
+

@@ -15,6 +15,10 @@ img = ImagePalette8bit.new( Silvercoin::COIN_PALETTE, size: 4 )
 img.save( "./tmp/palette_silvercoin.png" )
 img.zoom(2).save( "tmp/palette_silvercoinx2.png" )
 
+img = ImagePalette8bit.new( Bronzecoin::COIN_PALETTE, size: 4 )
+img.save( "./tmp/palette_bronzecoin.png" )
+img.zoom(2).save( "tmp/palette_bronzecoinx2.png" )
+
 
 ##
 # generate gold/silver/bronze coin punks
@@ -38,6 +42,10 @@ specs.each_with_index do |attributes, i|
    coin = punk.silvercoin  ## turn into silvercoin
    coin.save( "./tmp/silvercoin-#{i+1}.png" )
    coin.zoom(4).save( "./tmp/silvercoin-#{i+1}@4x.png" )
+
+   coin = punk.bronzecoin  ## turn into bronzecoin
+   coin.save( "./tmp/bronzecoin-#{i+1}.png" )
+   coin.zoom(4).save( "./tmp/bronzecoin-#{i+1}@4x.png" )
 end
 
 

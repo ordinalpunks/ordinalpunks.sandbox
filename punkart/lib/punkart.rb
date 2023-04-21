@@ -11,6 +11,7 @@ require_relative 'punkart/version'   # let versoin go first
 require_relative 'punkart/dollar'
 require_relative 'punkart/goldcoin'
 require_relative 'punkart/silvercoin'
+require_relative 'punkart/bronzecoin'
 
 
 module Pixelart
@@ -23,6 +24,7 @@ alias_method :dollarize, :greenback
 
 def goldcoin()  Goldcoin.mint( self ); end
 def silvercoin()  Silvercoin.mint( self ); end
+def bronzecoin()  Bronzecoin.mint( self ); end
 
 
 end # class Image

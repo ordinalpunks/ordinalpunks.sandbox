@@ -1,5 +1,5 @@
 require 'hoe'
-require './lib/punkmaker/version.rb'
+require './lib/punkart/version.rb'
 
 
 ###
@@ -9,11 +9,12 @@ class Hoe
 end
 
 
-Hoe.spec 'punkmaker' do
+Hoe.spec 'punkart' do
 
-  self.version = Pixelart::Module::Punkmaker::VERSION
+  self.version = Pixelart::Module::Punkart::VERSION
 
-  self.summary = 'punkmaker gem - make your own (pixel) punk base (archetype) heads incl. humans, zombies, apes, aliens, mummies, robots, and much more'
+
+  self.summary = 'punkart gem - (automagically) turn your "classic" punk (pixel) heads into dollar greenbacks, gold/silver/bronze coins, and much more'
   self.description = summary
 
   self.urls    = { home: 'https://github.com/cryptopunksnotdead/cryptopunks' }
@@ -27,6 +28,8 @@ Hoe.spec 'punkmaker' do
 
   self.extra_deps = [
     ['pixelart'],
+    ['punks'],
+    ['punkmaker'],
   ]
 
   self.licenses = ['Public Domain']

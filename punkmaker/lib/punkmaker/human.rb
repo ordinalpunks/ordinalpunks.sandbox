@@ -4,8 +4,9 @@ module Punk
 
 module Human   ## make it a class - why? why not?
 
-  BASE_M = Sheet.find_by( name: 'Male 4' )
-  BASE_F = Sheet.find_by( name: 'Female 4' )
+  BASE_M = Image.read( "#{Pixelart::Module::Punkmaker.root}/config/human-male4.png" )
+  BASE_F = Image.read( "#{Pixelart::Module::Punkmaker.root}/config/human-female4.png" )
+
 
   def self.make( color,
                  eye_color: nil,

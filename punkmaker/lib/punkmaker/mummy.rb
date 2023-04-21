@@ -3,8 +3,9 @@ module Punk
 
   module Mummy   ## make it a class - why? why not?
 
-    BASE_M = Sheet.find_by( name: 'Mummy' )
-    BASE_F = Sheet.find_by( name: 'Mummy Female' )
+    BASE_M = Image.read( "#{Pixelart::Module::Punkmaker.root}/config/mummy-male.png" )
+    BASE_F = Image.read( "#{Pixelart::Module::Punkmaker.root}/config/mummy-female.png" )
+
 
     def self.make( color,
                    eye_color: nil,

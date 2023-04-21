@@ -1,7 +1,6 @@
 # punk art
 
-punkart gem - (automagically) turn your "classic" punk (pixel) heads into dollar greenbacks,
-gold/silver/bronze coins, and much more
+punkart gem - (automagically) turn your "classic" punk (pixel) heads into dollar greenbacks, gold/silver/bronze coins, and much more
 
 
 

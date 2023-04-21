@@ -33,3 +33,5 @@ end # module Pixelart
 
 
 
+puts Pixelart::Module::Punkart.banner    # say hello
+

@@ -1,6 +1,6 @@
 require 'punks'
 
-BITCOIN_TILE = Image.read( "./bitcoin-24x24.png" )
+DOLLAR_TILE = Image.read( "./dollar-24x24.png" )
 
 
 
@@ -38,17 +38,17 @@ ids.each do |id|
   pp attributes
 
   punk = Punk::Image.generate( *attributes )
-  punk = punk.background( BITCOIN_TILE )
+  punk = punk.background( DOLLAR_TILE )
 
-  punk.save( "./tmp/bitcoin-#{id+1}.png" )
-  punk.zoom(4).save( "./tmp/bitoin-#{id+1}@4x.png" )
+  punk.save( "./tmp/dollar-#{id+1}.png" )
+  punk.zoom(4).save( "./tmp/dollar-#{id+1}@4x.png" )
 
   composite << punk
 end
 
 
-composite.save( "./tmp/bitcoins.png" )
-composite.zoom(4).save( "./tmp/bitcoins@4x.png" )
+composite.save( "./tmp/dollars.png" )
+composite.zoom(4).save( "./tmp/dollars@4x.png" )
 
 
 
@@ -57,12 +57,12 @@ composite.zoom(4).save( "./tmp/bitcoins@4x.png" )
 composite = ImageComposite.new( 3, 3 )
 
 9.times do
-  composite << BITCOIN_TILE
+  composite << DOLLAR_TILE
 end
 
-composite.save( "./tmp/background.png" )
-composite.zoom(4).save( "./tmp/background@4x.png" )
-composite.zoom(8).save( "./tmp/background@8x.png" )
+composite.save( "./tmp/background-dollar.png" )
+composite.zoom(4).save( "./tmp/background-dollar@4x.png" )
+composite.zoom(8).save( "./tmp/background-dollar@8x.png" )
 
 
 puts "bye"

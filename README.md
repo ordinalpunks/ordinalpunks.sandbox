@@ -197,6 +197,34 @@ Turn your "classic" ordinal punks into true "Bitcoin Ordinal Punks"  with an ora
 </details>
 
 
+Breaking news - sponsored by the fed(eral reserve) - a free airdrop variant that turns "classic" ordinal punks into
+"The Ordinal Punks Reserve" with a green dollar (mosaic)
+tile background ...
+![](bitcoin/dollar-24x24.png) ...
+
+3x3 ("The Invisibles")
+
+![](bitcoin/i/background-dollar.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](bitcoin/i/background-dollar@4x.png)
+
+</details>
+
+
+
+![](bitcoin/i/dollars.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](bitcoin/i/dollars@4x.png)
+
+</details>
+
+
 
 
 

@@ -98,4 +98,21 @@ composite.save( "./tmp/bronzecoins.png" )
 composite.zoom(4).save( "./tmp/bronzecoins@4x.png" )
 
 
+
+
+ids = (0..99)
+ids.each do |id|
+  attributes = rec_to_attributes( recs[id] )
+  pp attributes
+
+  punk = Punk::Image.generate( *attributes )
+
+  coin = mint( punk )
+
+  coin.save( "./tmp3/bronzecoin-#{id+1}.png" )
+  coin.zoom(4).save( "./tmp3/bronzecoin-#{id+1}@4x.png" )
+end
+
+
+
 puts "bye"

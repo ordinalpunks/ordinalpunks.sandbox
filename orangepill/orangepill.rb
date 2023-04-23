@@ -156,9 +156,11 @@ end
 
 
 
+BITCOIN_TILE = Image.read( "./bitcoin-24x24.png" )
 
-composite = ImageComposite.new( 10, 10 )
 
+composite     = ImageComposite.new( 10, 10 )
+composite_ii  = ImageComposite.new( 10, 10 )
 
 ids = (0..99)
 pp ids
@@ -168,16 +170,24 @@ ids.each do |id|
   pp attributes
 
   punk = orangepill( *attributes )
-
   punk.save( "./tmp2/orangepill-#{id+1}.png" )
   punk.zoom(4).save( "./tmp2/orangepill-#{id+1}@4x.png" )
 
   composite << punk
+
+  punk_ii = punk.background( BITCOIN_TILE )
+  punk_ii.save( "./tmp2/orangepill_ii-#{id+1}.png" )
+  punk_ii.zoom(4).save( "./tmp2/orangepill_ii-#{id+1}@4x.png" )
+
+  composite_ii << punk_ii
 end
 
 
 composite.save( "./tmp/orangepilled.png" )
 composite.zoom(4).save( "./tmp/orangepilled@4x.png" )
+
+composite_ii.save( "./tmp/orangepilled_ii.png" )
+composite_ii.zoom(4).save( "./tmp/orangepilled_ii@4x.png" )
 
 
 puts "missing mappings:"

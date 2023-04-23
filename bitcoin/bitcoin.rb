@@ -65,5 +65,19 @@ composite.zoom(4).save( "./tmp/background@4x.png" )
 composite.zoom(8).save( "./tmp/background@8x.png" )
 
 
+
+BITCOIN_TILE_II = Image.read( "./bitcoin_ii-24x24.png" )
+
+composite = ImageComposite.new( 3, 3 )
+
+9.times do
+  composite << BITCOIN_TILE_II
+end
+
+composite.save( "./tmp/background_ii.png" )
+composite.zoom(4).save( "./tmp/background_ii@4x.png" )
+composite.zoom(8).save( "./tmp/background_ii@8x.png" )
+
+
 puts "bye"
 

@@ -173,16 +173,18 @@ Turn your "classic" ordinal punks into blue (poker) chips...
 ### /bitcoin
 
 Turn your "classic" ordinal punks into true "Bitcoin Ordinal Punks"  with an orange bitcoin (mosaic) tile background
-![](bitcoin/bitcoin-24x24.png) ...
+![](bitcoin/bitcoin-24x24.png) ![](bitcoin/bitcoin_ii-24x24.png) ...
 
 3x3 ("The Invisibles")
 
 ![](bitcoin/i/background.png)
+![](bitcoin/i/background_ii.png)
 
 <details>
 <summary markdown="1">4x</summary>
 
 ![](bitcoin/i/background@4x.png)
+![](bitcoin/i/background_ii@4x.png)
 
 </details>
 
@@ -200,16 +202,18 @@ Turn your "classic" ordinal punks into true "Bitcoin Ordinal Punks"  with an ora
 Breaking news - sponsored by the fed(eral reserve) - a free airdrop variant that turns "classic" ordinal punks into
 "The Ordinal Punks Reserve" with a green dollar (mosaic)
 tile background ...
-![](bitcoin/dollar-24x24.png) ...
+![](bitcoin/dollar-24x24.png) ![](bitcoin/dollar_ii-24x24.png) ...
 
 3x3 ("The Invisibles")
 
 ![](bitcoin/i/background-dollar.png)
+![](bitcoin/i/background-dollar_ii.png)
 
 <details>
 <summary markdown="1">4x</summary>
 
 ![](bitcoin/i/background-dollar@4x.png)
+![](bitcoin/i/background-dollar_ii@4x.png)
 
 </details>
 

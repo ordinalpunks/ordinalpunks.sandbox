@@ -65,5 +65,18 @@ composite.zoom(4).save( "./tmp/background-dollar@4x.png" )
 composite.zoom(8).save( "./tmp/background-dollar@8x.png" )
 
 
+DOLLAR_TILE_II = Image.read( "./dollar_ii-24x24.png" )
+
+composite = ImageComposite.new( 3, 3 )
+
+9.times do
+  composite << DOLLAR_TILE_II
+end
+
+composite.save( "./tmp/background-dollar_ii.png" )
+composite.zoom(4).save( "./tmp/background-dollar_ii@4x.png" )
+composite.zoom(8).save( "./tmp/background-dollar_ii@8x.png" )
+
+
 puts "bye"
 

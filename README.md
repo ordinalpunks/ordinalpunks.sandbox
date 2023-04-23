@@ -229,6 +229,62 @@ tile background ...
 </details>
 
 
+... or with a blue euro (mosaic)
+tile background ...
+![](bitcoin/euro-24x24.png) ...
+
+3x3 ("The Invisibles")
+
+![](bitcoin/i/background-euro.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](bitcoin/i/background-euro@4x.png)
+
+</details>
+
+
+
+![](bitcoin/i/euros.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](bitcoin/i/euros@4x.png)
+
+</details>
+
+
+... or with a red pound (mosaic)
+tile background ...
+![](bitcoin/pound-24x24.png) ...
+
+3x3 ("The Invisibles")
+
+![](bitcoin/i/background-pound.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](bitcoin/i/background-pound@4x.png)
+
+</details>
+
+
+
+![](bitcoin/i/pounds.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](bitcoin/i/pounds@4x.png)
+
+</details>
+
+
+
+
 
 
 

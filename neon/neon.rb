@@ -99,6 +99,9 @@ ids.each do |id|
   punk.save( "./tmp/neon-#{id+1}.png" )
   punk.zoom(4).save( "./tmp/neon-#{id+1}@4x.png" )
 
+  # punk.save( "./i/neon-#{id+1}.png" )
+  # punk.zoom(4).save( "./i/neon-#{id+1}@4x.png" )
+
   composite << punk
 end
 

@@ -287,6 +287,22 @@ tile background ...
 
 
 
+### /sketch
+
+Turn your "classic" ordinal punks into a black & white (1-bit) pencial drawing sketches (49x49px) edition...
+
+![](sketch/i/sketches.png)
+
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](sketch/i/sketches@4px.png)
+
+</details>
+
+
+
 
 
 

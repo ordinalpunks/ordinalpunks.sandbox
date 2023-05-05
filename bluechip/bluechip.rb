@@ -93,6 +93,8 @@ end
 
 
 
+###
+#  generate (preview strips)
 
 
 composite = ImageComposite.new( 3, 4, width:  33+4,
@@ -116,8 +118,26 @@ ids.each do |id|
 end
 
 
+composite.save( "./tmp/bluechips-strip.png" )
+composite.zoom(4).save( "./tmp/bluechips-strip@4x.png" )
+
+
+composite = ImageComposite.new( 10, 10, width:  33,
+                                        height: 33 )
+
+ids = (0..99)
+ids.each do |id|
+  attributes = rec_to_attributes( recs[id] )
+  pp attributes
+
+  punk = Punk::Image.generate( *attributes )
+
+  chip = mint( punk )
+
+  composite << chip
+end
+
 composite.save( "./tmp/bluechips.png" )
-composite.zoom(4).save( "./tmp/bluechips@4x.png" )
 
 
 puts "bye"

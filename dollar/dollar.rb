@@ -82,7 +82,8 @@ end
 
 
 
-
+###
+#  generate (preview strips)
 
 composite = ImageComposite.new( 3, 4, width:  DOLLAR_FRAME.width+4,
                                       height: DOLLAR_FRAME.height+4,
@@ -106,9 +107,13 @@ ids.each do |id|
 end
 
 
-composite.save( "./tmp/dollars.png" )
-composite.zoom(4).save( "./tmp/dollars@4x.png" )
+composite.save( "./tmp/dollars-strip.png" )
+composite.zoom(4).save( "./tmp/dollars-strip@4x.png" )
 
+
+
+composite = ImageComposite.new( 10, 10, width:  DOLLAR_FRAME.width,
+                                        height: DOLLAR_FRAME.height )
 
 ###
 #  note: ids are off-by-one (starting at zero NOT one), sorry!
@@ -127,8 +132,12 @@ ids.each do |id|
   dollar.save( "./tmp/dollar-#{id+1}.png" )
   dollar.zoom(4).save( "./tmp/dollar-#{id+1}@4x.png" )
   ## dollar.zoom(8).save( "./tmp/dollar-#{id+1}@8x.png" )
+
+  composite << dollar
 end
 
+
+composite.save( "./tmp/dollars.png" )
 
 
 puts "bye"

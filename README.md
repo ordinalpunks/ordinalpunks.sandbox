@@ -29,12 +29,12 @@ used in 100 ordinal punks collection
 
 Turn your ordinal punks into greenback dollar bills. (Money printer go)  brrr.......
 
-![](dollar/i/dollars.png)
+![](dollar/i/dollars-strip.png)
 
 <details>
 <summary markdown="1">4x</summary>
 
-![](dollar/i/dollars@4x.png)
+![](dollar/i/dollars-strip@4x.png)
 
 </details>
 
@@ -126,32 +126,32 @@ Turn your "classic" ordinal punks into an all orange pill(ed) edition...
 
 Turn your "classic" ordinal punks into gold/silver/bronze coins...
 
-![](coins/i/goldcoins.png)
+![](coins/i/goldcoins-strip.png)
 
 <details>
 <summary markdown="1">4x</summary>
 
-![](coins/i/goldcoins@4x.png)
+![](coins/i/goldcoins-strip@4x.png)
 
 </details>
 
 
-![](coins/i/silvercoins.png)
+![](coins/i/silvercoins-strip.png)
 
 <details>
 <summary markdown="1">4x</summary>
 
-![](coins/i/silvercoins@4x.png)
+![](coins/i/silvercoins-strip@4x.png)
 
 </details>
 
 
-![](coins/i/bronzecoins.png)
+![](coins/i/bronzecoins-strip.png)
 
 <details>
 <summary markdown="1">4x</summary>
 
-![](coins/i/bronzecoins@4x.png)
+![](coins/i/bronzecoins-strip@4x.png)
 
 </details>
 
@@ -161,14 +161,15 @@ Turn your "classic" ordinal punks into gold/silver/bronze coins...
 
 Turn your "classic" ordinal punks into blue (poker) chips...
 
-![](bluechip/i/bluechips.png)
+![](bluechip/i/bluechips-strip.png)
 
 <details>
 <summary markdown="1">4x</summary>
 
-![](bluechip/i/bluechips@4x.png)
+![](bluechip/i/bluechips-strip@4x.png)
 
 </details>
+
 
 
 
@@ -317,6 +318,21 @@ Turn your black & white (1-bit) ordinal punk sketches into a neon light glow edi
 
 </details>
 
+
+
+
+### /polaroid
+
+Turn your "classic" ordinal punks into insta polaroid photos...
+
+![](polaroid/i/polaroids-strip.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](polaroid/i/polaroids-strip@4x.png)
+
+</details>
 
 
 

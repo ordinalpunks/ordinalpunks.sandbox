@@ -75,8 +75,8 @@ end
 
 
 
-
-
+###
+#  generate (preview strips)
 
 composite = ImageComposite.new( 3, 4, width:  32+4,
                                       height: 32+4 )
@@ -100,9 +100,13 @@ ids.each do |id|
 end
 
 
-composite.save( "./tmp/goldcoins.png" )
-composite.zoom(4).save( "./tmp/goldcoins@4x.png" )
+composite.save( "./tmp/goldcoins-strip.png" )
+composite.zoom(4).save( "./tmp/goldcoins-strip@4x.png" )
 
+
+
+composite = ImageComposite.new( 10, 10, width:  32,
+                                        height: 32 )
 
 ids = (0..99)
 ids.each do |id|
@@ -115,7 +119,12 @@ ids.each do |id|
 
   coin.save( "./i/goldcoin-#{id+1}.png" )
   coin.zoom(4).save( "./i/goldcoin-#{id+1}@4x.png" )
+
+  composite << coin
 end
+
+
+composite.save( "./tmp/goldcoins.png" )
 
 
 puts "bye"

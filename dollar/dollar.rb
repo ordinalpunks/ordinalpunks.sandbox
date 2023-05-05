@@ -87,7 +87,7 @@ end
 
 composite = ImageComposite.new( 3, 4, width:  DOLLAR_FRAME.width+4,
                                       height: DOLLAR_FRAME.height+4,
-                                      background: '#000000' )
+                                      background: '#ffffff' )
 
 
 ids = (0..11)

@@ -106,6 +106,22 @@ using the (dr. ellis) monk¹ skin tones (01/02/03/04/05/06/07/08/09/10)...
 
 
 
+### /apes
+
+Turn your "classic" ordinal punks into a planet ape (note: the mummies become trippy apes and the skeletons become white apes)...
+
+![](apes/i/apes.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](apes/i/apes@4x.png)
+
+</details>
+
+
+
+
 ### /orangepill
 
 Turn your "classic" ordinal punks into an all orange pill(ed) edition...
@@ -333,24 +349,6 @@ Turn your "classic" ordinal punks into insta polaroid photos...
 ![](polaroid/i/polaroids-strip@4x.png)
 
 </details>
-
-
-
-
-### /apes
-
-Turn your "classic" ordinal punks into a planet ape (note: the mummies become trippy apes and the skeletons become white apes)...
-
-![](apes/i/apes.png)
-
-<details>
-<summary markdown="1">4x</summary>
-
-![](apes/i/apes@4x.png)
-
-</details>
-
-
 
 
 

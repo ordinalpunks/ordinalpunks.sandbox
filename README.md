@@ -337,6 +337,26 @@ Turn your "classic" ordinal punks into insta polaroid photos...
 
 
 
+### /apes
+
+Turn your "classic" ordinal punks into a planet ape (note: the mummies become trippy apes and the skeletons become white apes)...
+
+![](apes/i/apes.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](apes/i/apes@4x.png)
+
+</details>
+
+
+
+
+
+
+
+
 
 ## Questions? Comments?
 

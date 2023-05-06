@@ -9,10 +9,11 @@ require 'punks'
 
 ##
 #  more new punkette archetypes & attributes
+##  note: use zombie ape and alien ape  !!!!  (in key lookup)
 PUNKETTE_PATCH = {
-  'apefemaleblue'     =>  Image.read( './more/ape-female-blue.png'),
-  'zombieapefemale'   =>  Image.read( './more/zombie-ape-female.png'),
-  'alienapefemale'    =>  Image.read( './more/alien-ape-female.png'),
+  'apefemaleblue'     =>  Image.read( '../more/ape-female-blue.png'),
+  'zombieapefemale'   =>  Image.read( '../more/ape-zombie-female.png'),
+  'alienapefemale'    =>  Image.read( '../more/ape-alien-female.png'),
 }
 
 

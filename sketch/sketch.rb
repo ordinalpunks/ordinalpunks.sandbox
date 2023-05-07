@@ -60,8 +60,8 @@ composite.zoom(4).save( "./tmp/sketches@4x.png" )
 #  invert  - that is, black (0x000000) to white (0xffffff)
 #                      and white to black
 composite_inverted = composite.invert
-composite_inverted.save( "./tmp/sketches_invert.png" )
-composite_inverted.zoom(4).save( "./tmp/sketches_invert@4x.png" )
+composite_inverted.save( "./tmp/sketches-invert.png" )
+composite_inverted.zoom(4).save( "./tmp/sketches-invert@4x.png" )
 
 
 puts "bye"

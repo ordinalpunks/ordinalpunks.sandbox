@@ -3,8 +3,11 @@
 #    $   ruby ./sketch.rb
 
 
-require 'punks'
+## get latest version; wait for Image#invert getting added upstream
+$LOAD_PATH.unshift( '../../../pixelart/pixelart/pixelart/lib' )
 
+
+require 'punks'
 
 
 ####
@@ -52,6 +55,13 @@ end
 composite.save( "./tmp/sketches.png" )
 composite.zoom(4).save( "./tmp/sketches@4x.png" )
 
+
+##
+#  invert  - that is, black (0x000000) to white (0xffffff)
+#                      and white to black
+composite_inverted = composite.invert
+composite_inverted.save( "./tmp/sketches_invert.png" )
+composite_inverted.zoom(4).save( "./tmp/sketches_invert@4x.png" )
 
 
 puts "bye"

@@ -310,11 +310,20 @@ Turn your "classic" ordinal punks into a black & white (1-bit) pencial drawing s
 
 ![](sketch/i/sketches.png)
 
+... (black <=> white) inverted ...
+
+![](sketch/i/sketches-invert.png)
+
 
 <details>
 <summary markdown="1">4x</summary>
 
 ![](sketch/i/sketches@4x.png)
+
+... (black <=> white) inverted ...
+
+![](sketch/i/sketches-invert@4x.png)
+
 
 </details>
 

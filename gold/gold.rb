@@ -141,7 +141,8 @@ end
 
 
 
-composite = ImageComposite.new( 10, 10 )
+## note: use a "golden" background - why? why not?
+composite = ImageComposite.new( 10, 10, background: '#F2A900' )
 
 
 ids = (0..99)

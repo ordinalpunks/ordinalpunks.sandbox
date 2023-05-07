@@ -87,7 +87,10 @@ end
 
 
 colors = {
-  'neon' => 'f7931a',   ## bitcoin orange
+  'neon'        => 'f7931a',   ## bitcoin orange
+  'neon-green'  => '00ff00',
+  'neon-blue'   => '0000ff',
+  'neon-red'    => 'ff0000',
 }
 
 
@@ -103,9 +106,6 @@ colors.each do |name, color|
     punk = Punk::Image.generate( *attributes ).neon( color )
     punk.save( "./tmp/#{name}-#{id+1}.png" )
     punk.zoom(4).save( "./tmp/#{name}-#{id+1}@4x.png" )
-
-    # punk.save( "./i/neon-#{id+1}.png" )
-    # punk.zoom(4).save( "./i/neon-#{id+1}@4x.png" )
 
     composite << punk
   end

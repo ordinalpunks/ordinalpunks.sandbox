@@ -85,30 +85,34 @@ end
 
 
 
-composite     = ImageComposite.new( 10, 10,  width:  49,
-                                             height: 49 )
 
-ids = (0..99)
-pp ids
+colors = {
+  'neon' => 'f7931a',   ## bitcoin orange
+}
 
-ids.each do |id|
-  attributes = rec_to_attributes( recs[id] )
-  pp attributes
 
-  punk = Punk::Image.generate( *attributes ).neon( 'f7931a' )
-  punk.save( "./tmp/neon-#{id+1}.png" )
-  punk.zoom(4).save( "./tmp/neon-#{id+1}@4x.png" )
+colors.each do |name, color|
+  composite     = ImageComposite.new( 10, 10,  width:  49,
+                                               height: 49 )
 
-  # punk.save( "./i/neon-#{id+1}.png" )
-  # punk.zoom(4).save( "./i/neon-#{id+1}@4x.png" )
+  ids = (0..99)
+  ids.each do |id|
+    attributes = rec_to_attributes( recs[id] )
+    pp attributes
 
-  composite << punk
+    punk = Punk::Image.generate( *attributes ).neon( color )
+    punk.save( "./tmp/#{name}-#{id+1}.png" )
+    punk.zoom(4).save( "./tmp/#{name}-#{id+1}@4x.png" )
+
+    # punk.save( "./i/neon-#{id+1}.png" )
+    # punk.zoom(4).save( "./i/neon-#{id+1}@4x.png" )
+
+    composite << punk
+  end
+
+  composite.save( "./tmp/#{name}.png" )
+  composite.zoom(4).save( "./tmp/#{name}@4x.png" )
 end
-
-
-composite.save( "./tmp/neons.png" )
-composite.zoom(4).save( "./tmp/neons@4x.png" )
-
 
 
 puts "bye"

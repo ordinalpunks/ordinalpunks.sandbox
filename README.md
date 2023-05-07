@@ -126,13 +126,11 @@ Turn your "classic" ordinal punks into a planet ape (note: the mummies become tr
 
 Turn your "classic" ordinal punks into an all orange pill(ed) edition...
 
-![](orangepill/i/orangepilled.png)
 ![](orangepill/i/orangepilled_ii.png)
 
 <details>
 <summary markdown="1">4x</summary>
 
-![](orangepill/i/orangepilled@4x.png)
 ![](orangepill/i/orangepilled_ii@4x.png)
 
 </details>
@@ -343,6 +341,13 @@ Turn your black & white (1-bit) ordinal punk sketches into a neon light glow edi
 
 </details>
 
+
+
+### /led
+
+Turn your "classic" ordinal punks into a led light edition (led 4px, spacing 1px)...
+
+![](led/i/leds.png)
 
 
 

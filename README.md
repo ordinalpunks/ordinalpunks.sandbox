@@ -341,7 +341,7 @@ Turn your "classic" ordinal punks into a black & white (1-bit) pencial drawing s
 
 ... (black <=> white) inverted ...
 
-![](sketch/i/sketches-invert-ii.png)
+![](sketch/i/sketches-ii-invert.png)
 
 
 

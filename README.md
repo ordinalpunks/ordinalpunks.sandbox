@@ -304,13 +304,17 @@ tile background ...
 
 ### /sketch
 
-Turn your "classic" ordinal punks into a black & white (1-bit) pencial drawing sketches (49x49px) edition...
+Turn your "classic" ordinal punks into a black & white (1-bit) pencial drawing sketches (49x49px) edition (with line 1px, spacing 1px - 49x49px)...
 
 ![](sketch/i/sketches.png)
 
 ... (black <=> white) inverted ...
 
 ![](sketch/i/sketches-invert.png)
+
+... orange pilled ...
+
+![](sketch/i/sketches-invert_orange.png)
 
 
 <details>
@@ -322,8 +326,23 @@ Turn your "classic" ordinal punks into a black & white (1-bit) pencial drawing s
 
 ![](sketch/i/sketches-invert@4x.png)
 
+... orange pilled ...
+
+![](sketch/i/sketches-invert_orange@4x.png)
 
 </details>
+
+
+
+... (with line 1px, spacing 4px - 121x121px)...
+
+
+![](sketch/i/sketches-ii.png)
+
+... (black <=> white) inverted ...
+
+![](sketch/i/sketches-invert-ii.png)
+
 
 
 

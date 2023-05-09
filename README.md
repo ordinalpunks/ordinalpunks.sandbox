@@ -384,6 +384,20 @@ Turn your "classic" ordinal punks into insta polaroid photos...
 </details>
 
 
+### /hollywood
+
+The drum roll please...
+turn your "classic" ordinal punks into hollywood 35mm film stars & starlets...
+
+![](hollywood/i/hollywood-strip.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](hollywood/i/hollywood-strip@4x.png)
+
+</details>
+
 
 
 

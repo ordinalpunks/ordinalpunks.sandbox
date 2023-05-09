@@ -125,7 +125,7 @@ Turn your "classic" ordinal punks into a planet ape (note: the mummies become tr
 
 ### /lasereyes
 
-Turn your "classic" ordinal punks into all-laser-eyed "beam to-the-moon" superpunks...
+Turn your "classic" ordinal punks into all-laser-eyed "beam to-the-moon" superpower punks...
 
 ![](lasereyes/i/lasereyed.png)
 
@@ -151,6 +151,19 @@ Turn your "classic" ordinal punks into an all orange pill(ed) edition...
 ![](orangepill/i/orangepilled_ii@4x.png)
 
 </details>
+
+... with all-laser-eyed "beam to-the-moon" superpower...
+
+![](orangepill/i/orangepilled_iii.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](orangepill/i/orangepilled_iii@4x.png)
+
+</details>
+
+
 
 
 ### /coins

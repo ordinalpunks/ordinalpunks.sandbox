@@ -103,7 +103,8 @@ ORANGEPILL = {
 MISSING = Hash.new(0)
 
 
-def orangepill( *attributes )
+
+def orangepill( *attributes, lasereyes: false )
   more_attributes = attributes[1..-1]
 
   base_orange = ORANGEPILL[ attributes[0] ]
@@ -125,7 +126,30 @@ def orangepill( *attributes )
                                                     'Female Orange'
                                                    ].include?(base_orange)
 
-                                                                                  base_orange ==
+
+  if lasereyes
+       more_attributes = more_attributes.reject do |attr|
+                                            ['Big Shades',
+                                             '3D Glasses',
+                                             'VR',
+                                             'Clown Eyes Green',
+                                             'Clown Eyes Blue',
+                                             'Regular Shades',
+                                             'Eye Patch',
+                                             'Eye Mask',
+                                             'Classic Shades',
+                                             'Nerd Glasses',
+                                             'Blue Eyeshadow',
+                                             'Green Eye Shadow',
+                                             'Heart Shades',
+                                            ].include?(attr)
+                                           end
+
+    has_lasereyes = more_attributes.find { |attr| attr=='Laser Eyes' }
+
+    more_attributes << 'Laser Eyes'   unless has_lasereyes
+  end
+
   orangepill = Punk::Image.generate( base_orange, *more_attributes, patch: ORANGEPILL_PATCH )
   orangepill
 end
@@ -161,6 +185,7 @@ BITCOIN_TILE = Image.read( "./bitcoin-24x24.png" )
 
 composite     = ImageComposite.new( 10, 10 )
 composite_ii  = ImageComposite.new( 10, 10 )
+composite_iii  = ImageComposite.new( 10, 10 )
 
 ids = (0..99)
 pp ids
@@ -180,6 +205,12 @@ ids.each do |id|
   punk_ii.zoom(4).save( "./tmp2/orangepill_ii-#{id+1}@4x.png" )
 
   composite_ii << punk_ii
+
+  punk_iii = orangepill( *attributes, lasereyes: true ).background( BITCOIN_TILE )
+  punk_iii.save( "./tmp3/orangepill-#{id+1}.png" )
+  punk_iii.zoom(4).save( "./tmp3/orangepill-#{id+1}@4x.png" )
+
+  composite_iii << punk_iii
 end
 
 
@@ -188,6 +219,9 @@ composite.zoom(4).save( "./tmp/orangepilled@4x.png" )
 
 composite_ii.save( "./tmp/orangepilled_ii.png" )
 composite_ii.zoom(4).save( "./tmp/orangepilled_ii@4x.png" )
+
+composite_iii.save( "./tmp/orangepilled_iii.png" )
+composite_iii.zoom(4).save( "./tmp/orangepilled_iii@4x.png" )
 
 
 puts "missing mappings:"

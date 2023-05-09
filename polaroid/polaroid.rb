@@ -4,7 +4,7 @@
 
 
 
-require 'punks'
+require_relative '../utils/punks'
 
 
 POLAROID_FRAME   = Image.read( "./polaroid24x24.png" )
@@ -21,32 +21,11 @@ end
 
 
 
-
-
-
 ####
 #  read in ordinals metadata
 #    note: use ordinal punks v2 (the improved formula)
-recs = read_csv( "../ordinalpunks_v2.csv" )
-puts "    #{recs.size} record(s)"
-
-
-def rec_to_attributes( rec )
-  type =     rec['type']
-  gender =   rec['gender']
-  skin_tone = rec['skin_tone']
-
-  # note: merge type+gender+skin_tone into one attribute
-  base = "#{type} #{gender}"
-  base << " #{skin_tone}"       unless skin_tone.empty?
-
-  accessories = rec['accessories'].split( '/' ).map { |acc| acc.strip }
-  attributes = [base] + accessories
-  attributes
-end
-
-
-
+ordpunks = Punk::Collection.read( '../ordinalpunks_v2.csv' )
+puts "    #{ordpunks.size} record(s)"
 
 
 ###
@@ -58,21 +37,13 @@ composite = ImageComposite.new( 3, 4, width:  POLAROID_FRAME.width+4,
 
 
 ids = (0..11)
-pp ids
-
 ids.each do |id|
-  attributes = rec_to_attributes( recs[id] )
-  pp attributes
-
-  punk = Punk::Image.generate( *attributes )
-
-  photo = polaroid( punk )
+  photo = polaroid( ordpunks[id] )
 
   tile = Image.new( POLAROID_FRAME.width+4, POLAROID_FRAME.height+4 )
   tile.compose!( photo, 2, 2 )  ## add 2/2 padding
   composite << tile
 end
-
 
 composite.save( "./tmp/polaroids-strip.png" )
 composite.zoom(4).save( "./tmp/polaroids-strip@4x.png" )
@@ -82,18 +53,7 @@ composite.zoom(4).save( "./tmp/polaroids-strip@4x.png" )
 composite = ImageComposite.new( 10, 10, width:  POLAROID_FRAME.width,
                                         height: POLAROID_FRAME.height )
 
-###
-#  note: ids are off-by-one (starting at zero NOT one), sorry!
-
-# ids = [29, 45, 54, 65, 69, 77, 92, 94]
-ids = (0..99)
-ids.each do |id|
-  attributes = rec_to_attributes( recs[id] )
-  pp attributes
-
-  punk = Punk::Image.generate( *attributes )
-
-  ## change to greenback color palette
+ordpunks.each do |punk, id|
   photo = polaroid( punk )
 
   photo.save( "./tmp/polaroid-#{id+1}.png" )

@@ -139,33 +139,6 @@ Turn your "classic" ordinal punks into all-laser-eyed "beam to-the-moon" superpo
 
 
 
-### /orangepill
-
-Turn your "classic" ordinal punks into an all orange pill(ed) edition...
-
-![](orangepill/i/orangepilled_ii.png)
-
-<details>
-<summary markdown="1">4x</summary>
-
-![](orangepill/i/orangepilled_ii@4x.png)
-
-</details>
-
-... with all-laser-eyed "beam to-the-moon" superpower...
-
-![](orangepill/i/orangepilled_iii.png)
-
-<details>
-<summary markdown="1">4x</summary>
-
-![](orangepill/i/orangepilled_iii@4x.png)
-
-</details>
-
-
-
-
 ### /coins
 
 Turn your "classic" ordinal punks into gold/silver/bronze coins...
@@ -326,6 +299,34 @@ tile background ...
 <summary markdown="1">4x</summary>
 
 ![](bitcoin/i/pounds@4x.png)
+
+</details>
+
+
+
+
+
+### /orangepill
+
+Turn your "classic" ordinal punks into an all orange pill(ed) edition...
+
+![](orangepill/i/orangepilled_ii.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](orangepill/i/orangepilled_ii@4x.png)
+
+</details>
+
+... with all-laser-eyed "beam to-the-moon" superpower...
+
+![](orangepill/i/orangepilled_iii.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](orangepill/i/orangepilled_iii@4x.png)
 
 </details>
 

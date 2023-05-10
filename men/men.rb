@@ -11,13 +11,13 @@ require 'punks'
 ##
 #  more new men archetypes & attributes
 MEN_PATCH = {
- 'blondebob'     => Image.read( './more/m/blondebob.png' ),
- 'blondeshort'   => Image.read( './more/m/blondeshort.png' ),
- 'choker'        => Image.read( './more/m/choker.png' ),
- 'darkhair'      => Image.read( './more/m/darkhair.png' ),
- 'pilothelmet'   => Image.read( './more/m/pilothelmet.png' ),
- 'tiara'         => Image.read( './more/m/tiara.png' ),
- 'wildwhitehair' => Image.read( './more/m/wildwhitehair.png' ),
+ 'blondebob'     => Image.read( '../more/m/blondebob.png' ),
+ 'blondeshort'   => Image.read( '../more/m/blondeshort.png' ),
+ 'choker'        => Image.read( '../more/m/choker.png' ),
+ 'darkhair'      => Image.read( '../more/m/darkhair.png' ),
+ 'pilothelmet'   => Image.read( '../more/m/pilothelmet.png' ),
+ 'tiara'         => Image.read( '../more/m/tiara.png' ),
+ 'wildwhitehair' => Image.read( '../more/m/wildwhitehair.png' ),
 }
 
 

@@ -86,6 +86,20 @@ Turn your "classic" ordinal punks into an all-men punk edition...
 </details>
 
 
+### /taprootwizards
+
+Turn your "classic" ordinal punks into an all-men taproot wizards edition...
+
+![](taprootwizards/i/taprootwizards.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](taprootwizards/i/taprootwizards@4x.png)
+
+</details>
+
+
 
 ### /humans
 

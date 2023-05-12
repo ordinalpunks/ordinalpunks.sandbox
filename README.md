@@ -447,6 +447,41 @@ turn your "classic" ordinal punks into hollywood 35mm film stars & starlets...
 
 
 
+## Bonus  - 1000 More Ordinal Punks
+
+### /1000more
+
+Yes, you can.  Let's generate a thousand more never-before-seen ultra-rare
+ordinal punks.
+
+Step 1:  Generate the random attributes / meta data ...
+
+````
+id, type, accessories
+1, ape male gold, messy hair / spots
+2, zombie female, cap forward / earring
+3, male 1, jester hat / mole / big beard
+4, orc male, demon horns / clown eyes green
+5, demon male, messy hair / spots
+6, male 1, clown hair blue / chinstrap / medical mask
+7, male orange, jester hat / chinstrap / pipe
+8, female 4, cap forward / green eye shadow / silver chain
+9, female 4, blonde short / rosy cheeks / gold chain
+10, vampire male, demon horns / big beard
+...
+````
+
+(Source: [morepunks.csv](1000more/morepunks.csv))
+
+
+Step 2: Generate more ordinal punks....
+
+![](1000more/i/morepunks.png)
+
+
+
+
+
 
 ## Questions? Comments?
 

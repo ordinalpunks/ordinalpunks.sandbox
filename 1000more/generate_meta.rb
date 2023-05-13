@@ -2,10 +2,16 @@
 
 ATTRIBUTES = {
   'base' => [
-     ['male 1',
-      'male 2',
-      'male 3',
-      'male 4',
+     ['male m01',    ## bonus/extra - change male 1/2/3/4 to male m01/m02/...
+      'male m02',
+      'male m03',
+      'male m04',
+      'male m05',
+      'male m06',
+      'male m07',
+      'male m08',
+      'male m09',
+      'male m10',
       'male blue',
       'male orange',
       'male gold',
@@ -25,10 +31,16 @@ ATTRIBUTES = {
       'robot male',
     ],
     [
-      'female 1',
-      'female 2',
-      'female 3',
-      'female 4',
+      'female m01',  ## bonus/extra - change female 1/2/3/4 to female m01/m02/...
+      'female m02',
+      'female m03',
+      'female m04',
+      'female m05',
+      'female m06',
+      'female m07',
+      'female m08',
+      'female m09',
+      'female m10',
       'female blue',
       'female purple',
       'female orange',
@@ -247,7 +259,7 @@ pp recs
 
 
 headers = ['id', 'type', 'accessories']
-File.open( "./tmp/morepunks.csv", "w:utf-8" ) do |f|
+File.open( "./tmp2/morepunks.csv", "w:utf-8" ) do |f|
    f.write( headers.join( ', '))
    f.write( "\n")
    recs.each do |values|

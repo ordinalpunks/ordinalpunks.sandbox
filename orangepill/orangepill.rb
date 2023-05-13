@@ -227,4 +227,25 @@ composite_iii.zoom(4).save( "./tmp/orangepilled_iii@4x.png" )
 puts "missing mappings:"
 pp MISSING
 
+
+
+######
+#  extras
+
+
+specs = [
+  ['Zombie Male', 'Crazy Hair', 'Nerd Glasses'],
+  ['Zombie Male', 'Crazy Hair', 'Laser Eyes']
+]
+
+specs.each_with_index do |attributes, id|
+  pp attributes
+
+  punk = orangepill( *attributes ).background( BITCOIN_TILE )
+  punk.save( "./tmp3/extra-orangepill-#{id+1}.png" )
+  punk.zoom(4).save( "./tmp3/extra-orangepill-#{id+1}@4x.png" )
+end
+
+
+
 puts "bye"

@@ -141,7 +141,7 @@ ids = (0..99)
 pp ids
 
 ids.each do |id|
-  attributes = rec_to_attributes( recs[id], id )
+  attributes = rec_to_attributes( recs[id] )
   pp attributes
 
   punk = Punk::Image.generate( *attributes, patch: WIZARD_PATCH )

@@ -100,6 +100,22 @@ Turn your "classic" ordinal punks into an all-men taproot wizards edition...
 </details>
 
 
+### /wallstreetbets
+
+Turn your "classic" ordinal punks into an all-men wall street bets "you-only-live-once" degen edition...
+
+![](wallstreetbets/i/wallstreetbets.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](wallstreetbets/i/wallstreetbets@4x.png)
+
+</details>
+
+
+
+
 
 ### /humans
 

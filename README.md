@@ -71,6 +71,20 @@ Turn your "classic" ordinal punks into an extraordinal all-women punk / all punk
 </details>
 
 
+### /marilyns
+
+Turn your "classic" ordinal punks into an all-women punkette blonde have more bombshells...
+
+![](marilyns/i/marilyns.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](marilyns/i/marilyns@4x.png)
+
+</details>
+
+
 
 ### /men
 

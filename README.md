@@ -73,7 +73,7 @@ Turn your "classic" ordinal punks into an extraordinal all-women punk / all punk
 
 ### /marilyns
 
-Turn your "classic" ordinal punks into an all-women punkette blonde have more bombshells...
+Turn your "classic" ordinal punks into an all-women punkette blondes have more fun bombshells...
 
 ![](marilyns/i/marilyns.png)
 

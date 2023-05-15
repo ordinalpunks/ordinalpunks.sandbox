@@ -3,7 +3,7 @@
 #    $   ruby ./saudis.rb
 
 
-require 'punks'
+require_relative '../utils/punks'
 
 
 
@@ -128,49 +128,26 @@ def saudied( *attributes )
     more_attributes = below_attributes + [ shemagh ] + above_attributes
   end
 
-  saudi = Punk::Image.generate( base, *more_attributes )
-  saudi
+  [base] + more_attributes
 end
-
-
-
 
 
 ####
 #  read in ordinals metadata
-recs = read_csv( "../ordinalpunks_v2.csv" )
-puts "    #{recs.size} record(s)"
+#    note: use ordinal punks v2 (the improved formula)
+ordpunks = Punk::Collection.read( '../ordinalpunks_v2.csv' )
+puts "    #{ordpunks.size} record(s)"
 
-
-def rec_to_attributes( rec )
-  type =     rec['type']
-  gender =   rec['gender']
-  skin_tone = rec['skin_tone']
-
-  # note: merge type+gender+skin_tone into one attribute
-  base = "#{type} #{gender}"
-  base << " #{skin_tone}"       unless skin_tone.empty?
-
-  accessories = rec['accessories'].split( '/' ).map { |acc| acc.strip }
-  attributes = [base] + accessories
-  attributes
-end
 
 
 
 composite     = ImageComposite.new( 10, 10, background: '#006C35' )
 
-ids = (0..99)
-pp ids
-
-
 srand( 4242 )  # set random seed - for deterministic
 
-ids.each do |id|
-  attributes = rec_to_attributes( recs[id] )
-  pp attributes
+ordpunks.each_meta do |attributes, id|
+  punk = ordpunks.generate( *saudied( *attributes ))
 
-  punk = saudied( *attributes )
   punk.save( "./tmp2/saudi-#{id+1}.png" )
   punk.zoom(4).save( "./tmp2/saudi-#{id+1}@4x.png" )
 

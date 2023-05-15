@@ -488,6 +488,34 @@ turn your "classic" ordinal punks into hollywood 35mm film stars & starlets...
 </details>
 
 
+### /fastfood
+
+Turn your "classic" ordinal punks into fast food "Do you wanna fries with that?' crypto bros (& sis) - the mc'ds exclusive edition ...
+
+![](fastfood/i/fastfoodies.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](fastfood/i/fastfoodies@4x.png)
+
+</details>
+
+... the mc'ds plus burger king, wendy's, kentucky fried chicken (kfc),
+jack in the box, white castle, pizza hut,
+domino's pizza, baskin-robbins, dunkin' donuts and subway sandwich inclusive edition ...
+
+![](fastfood/i/fastfoodies_ii.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](fastfood/i/fastfoodies_ii@4x.png)
+
+</details>
+
+
+
 
 
 

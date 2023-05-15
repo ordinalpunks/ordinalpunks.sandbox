@@ -40,6 +40,12 @@ class Collection
     Punk::Image.generate( *attributes )
   end
 
+
+  def generate( *attributes )
+    Punk::Image.generate( *attributes )
+  end
+
+
   def _rec_to_attributes( rec )
     type =     rec['type']
     gender =   rec['gender']

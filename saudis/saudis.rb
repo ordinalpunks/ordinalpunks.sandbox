@@ -8,7 +8,7 @@ require 'punks'
 
 
 
-def saudied( *attributes, id )
+def saudied( *attributes )
   base            = attributes[0]
   more_attributes = attributes[1..-1]
 
@@ -170,7 +170,7 @@ ids.each do |id|
   attributes = rec_to_attributes( recs[id] )
   pp attributes
 
-  punk = saudied( *attributes, id )
+  punk = saudied( *attributes )
   punk.save( "./tmp2/saudi-#{id+1}.png" )
   punk.zoom(4).save( "./tmp2/saudi-#{id+1}@4x.png" )
 

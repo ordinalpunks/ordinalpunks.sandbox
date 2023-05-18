@@ -127,6 +127,7 @@ ordpunks.each_meta do |attributes, id|
   punk =  ordpunks.generate( *fastfoodied( *attributes )  )
 
   punk.save( "./tmp2/fastfoodie-#{id+1}.png" )
+  ## punk.save( "./24x24/fastfoodie-#{id+1}.png" )
   punk.zoom(4).save( "./tmp2/fastfoodie-#{id+1}@4x.png" )
 
   composite << punk
@@ -151,6 +152,7 @@ ordpunks.each_meta do |attributes, id|
                                    exclude: ['Crown', 'Cap Burger King'] ))
 
   punk.save( "./tmp2/fastfoodie_more-#{id+1}.png" )
+  ## punk.save( "./24x24/fastfoodie_more-#{id+1}.png" )
   punk.zoom(4).save( "./tmp2/fastfoodie_more-#{id+1}@4x.png" )
 
   composite << punk

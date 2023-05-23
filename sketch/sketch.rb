@@ -3,32 +3,19 @@
 #    $   ruby ./sketch.rb
 
 
-## get latest version; wait for Image#invert getting added upstream
-$LOAD_PATH.unshift( '../../../pixelart/pixelart/pixelart/lib' )
 
 
-require 'punks'
+require_relative '../utils/punks'
+
+
 
 
 ####
 #  read in ordinals metadata
-recs = read_csv( "../ordinalpunks_v2.csv" )
-puts "    #{recs.size} record(s)"
+#    note: use ordinal punks v2 (the improved formula)
+ordpunks = Punk::Collection.read( '../ordinalpunks_v2.csv' )
+puts "    #{ordpunks.size} record(s)"
 
-
-def rec_to_attributes( rec )
-  type =     rec['type']
-  gender =   rec['gender']
-  skin_tone = rec['skin_tone']
-
-  # note: merge type+gender+skin_tone into one attribute
-  base = "#{type} #{gender}"
-  base << " #{skin_tone}"       unless skin_tone.empty?
-
-  accessories = rec['accessories'].split( '/' ).map { |acc| acc.strip }
-  attributes = [base] + accessories
-  attributes
-end
 
 
 
@@ -38,23 +25,40 @@ end
 composite     = ImageComposite.new( 10, 10,  width:  25*1+24*1,
                                              height: 25*1+24*1 )
 
-ids = (0..99)
-pp ids
+composite_color = ImageComposite.new( 10, 10,  width:  25*1+24*1,
+                                               height: 25*1+24*1 )
 
-ids.each do |id|
-  attributes = rec_to_attributes( recs[id] )
-  pp attributes
 
-  punk = Punk::Image.generate( *attributes ).sketch( 1 )
-  punk.save( "./tmp/sketch-#{id+1}.png" )
-  punk.zoom(4).save( "./tmp/sketch-#{id+1}@4x.png" )
+ordpunks.each do |punk, id|
+  sketch = punk.sketch( 1 )
 
-  composite << punk
+  sketch.save( "./tmp/sketch-#{id+1}.png" )
+  sketch.zoom(4).save( "./tmp/sketch-#{id+1}@4x.png" )
+
+  composite << sketch
+
+  ## try "blocky-style"  - line color is transparent
+  blockie = punk.sketch( 1, line: 1, line_color: 0x0, colorize: true )
+
+  blockie.save( "./tmp/blockie-#{id+1}.png" )
+  blockie.zoom(4).save( "./tmp/blockie-#{id+1}@4x.png" )
+
+  ## try with color - change black to anthrazit
+  punk = punk.change_colors( { 0xff => 0x242124ff } )
+  sketch = punk.sketch( 1, colorize: true )
+
+  sketch.save( "./tmp/sketch_color-#{id+1}.png" )
+  sketch.zoom(4).save( "./tmp/sketch_color-#{id+1}@4x.png" )
+
+  composite_color << sketch
 end
 
 
 composite.save( "./tmp/sketches.png" )
 composite.zoom(4).save( "./tmp/sketches@4x.png" )
+
+composite_color.save( "./tmp/sketches_color.png" )
+composite_color.zoom(4).save( "./tmp/sketches_color@4x.png" )
 
 
 ##
@@ -76,21 +80,37 @@ composite_inverted.zoom(4).save( "./tmp/sketches-invert_orange@4x.png" )
 composite     = ImageComposite.new( 10, 10,  width:  24*4+25*1,
                                              height: 24*4+25*1 )
 
-ids = (0..99)
-pp ids
+composite_color   = ImageComposite.new( 10, 10,  width:  24*4+25*1,
+                                                 height: 24*4+25*1 )
 
-ids.each do |id|
-  attributes = rec_to_attributes( recs[id] )
-  pp attributes
 
-  punk = Punk::Image.generate( *attributes ).sketch( 4, line: 1 )
-  punk.save( "./tmp2/sketch-#{id+1}.png" )
+ordpunks.each do |punk, id|
+  sketch = punk.sketch( 4, line: 1 )
 
-  composite << punk
+  sketch.save( "./tmp2/sketch-#{id+1}.png" )
+
+  composite << sketch
+
+  ## try "blocky-style"  - line color is transparent
+  blockie = punk.sketch( 4, line: 2, line_color: 0x0, colorize: true )
+
+  blockie.save( "./tmp2/blockie-#{id+1}.png" )
+  blockie.zoom(4).save( "./tmp2/blockie-#{id+1}@4x.png" )
+
+  ## try with color
+  punk = punk.change_colors( { 0xff => 0x242124ff } )
+  sketch = punk.sketch( 4, line: 1, colorize: true )
+
+  sketch.save( "./tmp2/sketch_color-#{id+1}.png" )
+  sketch.zoom(4).save( "./tmp2/sketch_color-#{id+1}@4x.png" )
+
+  composite_color << sketch
 end
 
 
 composite.save( "./tmp/sketches-ii.png" )
+composite_color.save( "./tmp/sketches_color-ii.png" )
+
 
 ##
 #  invert  - that is, black (0x000000) to white (0xffffff)

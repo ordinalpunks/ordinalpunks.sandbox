@@ -1,3 +1,9 @@
+
+## note: get latest (unpublished) version of pixelart gem
+##   - wait for Image#invert getting added upstream ;-)
+$LOAD_PATH.unshift( '../../../pixelart/pixelart/pixelart/lib' )
+
+
 require 'punks'
 
 

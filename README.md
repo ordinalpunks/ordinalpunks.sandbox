@@ -405,6 +405,10 @@ Turn your "classic" ordinal punks into a black & white (1-bit) pencial drawing s
 
 ![](sketch/i/sketches-invert_orange.png)
 
+... with colors back ...
+
+![](sketch/i/sketches_color.png)
+
 
 <details>
 <summary markdown="1">4x</summary>
@@ -419,6 +423,10 @@ Turn your "classic" ordinal punks into a black & white (1-bit) pencial drawing s
 
 ![](sketch/i/sketches-invert_orange@4x.png)
 
+... with colors back ...
+
+![](sketch/i/sketches_color@4x.png)
+
 </details>
 
 
@@ -432,6 +440,9 @@ Turn your "classic" ordinal punks into a black & white (1-bit) pencial drawing s
 
 ![](sketch/i/sketches-ii-invert.png)
 
+... with colors back ...
+
+![](sketch/i/sketches_color-ii.png)
 
 
 

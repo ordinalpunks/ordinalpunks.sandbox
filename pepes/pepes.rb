@@ -46,6 +46,9 @@ Eyes, Mouth, Bandana, Cigarette
 
 Eyes, Eye Mask, Spots, Mouth (White), Goat, Gold Chain, Earring
 
+
+## extras
+Eyes, Mouth (Smile), Jester Hat
 TXT
 
 pp specs

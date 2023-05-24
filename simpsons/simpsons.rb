@@ -66,15 +66,22 @@ puts "  #{specs.size} record(s)"
 
 
 
+background_sky = Image.read( './background_sky-24x24.png' )
+
 
 composite = ImageComposite.new( 4, 5 )
 
 specs.each_with_index do |attributes,i|
    punk = Punk::Image.generate( *attributes, patch: PATCH )
-   punk.save( "./tmp/bart-#{i}.png" )
-   punk.zoom(4).save( "./tmp/bart-#{i}@4x.png" )
 
-   composite << punk     if i < 20
+   frame = Image.new( 24, 24 )
+   frame.compose!( background_sky )
+   frame.compose!( punk )
+
+   frame.save( "./tmp/bart-#{i}.png" )
+   frame.zoom(4).save( "./tmp/bart-#{i}@4x.png" )
+
+   composite << frame     if i < 20
 end
 
 

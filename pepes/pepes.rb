@@ -13,6 +13,16 @@ pepe.zoom(4).save( './tmp/pepe@4x.png')
 pepe.zoom(8).save( './tmp/pepe@8x.png')
 
 
+PATCH = {
+  'pepe' => Image.read( './pepe_face-24x24.png'),
+  'eyes' => Image.read( './pepe_eyes-24x24.png'),
+  'mouth' => Image.read( './pepe_mouth-24x24.png'),
+  'mouthsmile' => Image.read( './pepe_mouth-smile-24x24.png'),
+  'mouthfrown' => Image.read( './pepe_mouth-smile-24x24.png'),
+  'mouthwhite' => Image.read( './pepe_mouth-white-24x24.png'),
+}
+
+
 
 specs = parse_data( <<TXT )
 Eyes, Big Beard, Mouth (White)
@@ -54,15 +64,6 @@ TXT
 pp specs
 puts "  #{specs.size} record(s)"
 
-
-PATCH = {
-  'pepe' => Image.read( './pepe_face-24x24.png'),
-  'eyes' => Image.read( './pepe_eyes-24x24.png'),
-  'mouth' => Image.read( './pepe_mouth-24x24.png'),
-  'mouthsmile' => Image.read( './pepe_mouth-smile-24x24.png'),
-  'mouthfrown' => Image.read( './pepe_mouth-smile-24x24.png'),
-  'mouthwhite' => Image.read( './pepe_mouth-white-24x24.png'),
-}
 
 
 composite = ImageComposite.new( 4, 5 )

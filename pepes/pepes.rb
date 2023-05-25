@@ -55,6 +55,7 @@ Eyes, Mouth, Jester Hat
 Eyes, Mouth, Bandana, Cigarette
 
 Eyes, Eye Mask, Spots, Mouth (White), Goat, Gold Chain, Earring
+Eyes, Clown Nose, Medical Mask, Cigarette
 
 
 ## extras

@@ -499,6 +499,23 @@ turn your "classic" ordinal punks into hollywood 35mm film stars & starlets...
 </details>
 
 
+
+### /sepia
+
+Turn your "classic" ordinal punks into vintage sepia photos / paper scrolls...
+
+![](sepia/i/sepias.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](sepia/i/sepias@4x.png)
+
+</details>
+
+
+
+
 ### /fastfood
 
 Turn your "classic" ordinal punks into fast food "Do you wanna fries with that?' crypto bros (& sis) - the mc'ds exclusive edition ...

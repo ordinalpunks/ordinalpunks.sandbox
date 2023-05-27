@@ -59,6 +59,9 @@ Bart 2, Bandana, Cigarette
 
 Bart, Eye Mask, Spots, Goat, Gold Chain, Earring
 
+### more
+Bart, Clown Nose, Medical Mask, Cigarette
+
 TXT
 
 pp specs

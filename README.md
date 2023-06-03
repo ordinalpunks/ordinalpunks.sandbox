@@ -583,6 +583,32 @@ Turn your "classic" ordinal punks into frog onesies...
 </details>
 
 
+### /pride
+
+Turn your "classic" ordinal punks into a rainbow / pride edition...
+
+
+![](pride/i/pridepunks.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](pride/i/pridepunks@4x.png)
+
+</details>
+
+... or pepes ...
+
+![](pepes/i/pridepepes.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](pepes/i/pridepepes@4x.png)
+
+</details>
+
+
 
 
 

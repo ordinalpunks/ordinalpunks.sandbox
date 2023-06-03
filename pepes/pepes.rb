@@ -67,19 +67,28 @@ puts "  #{specs.size} record(s)"
 
 
 
-composite = ImageComposite.new( 4, 5 )
+composite         = ImageComposite.new( 4, 5 )
+composite_rainbow = ImageComposite.new( 4, 5 )
+
 
 specs.each_with_index do |more_attributes,i|
    punk = Punk::Image.generate( 'pepe', *more_attributes, patch: PATCH )
    punk.save( "./tmp/pepe-#{i}.png" )
    punk.zoom(4).save( "./tmp/pepe-#{i}@4x.png" )
 
-   composite << punk     if i < 20
+   if i < 20
+      composite          << punk
+      composite_rainbow  << punk.rainbow
+   end
 end
 
 
 composite.save( "./tmp/pepes.png" )
 composite.zoom(4).save( "./tmp/pepes@4x.png" )
+
+composite_rainbow.save( "./tmp/pridepepes.png" )
+composite_rainbow.zoom(4).save( "./tmp/pridepepes@4x.png" )
+
 
 
 

@@ -390,6 +390,20 @@ Turn your "classic" ordinal punks into an all orange pill(ed) edition...
 
 
 
+### /ethscribes
+
+Turn your "classic" ordinal punks into an all ethscribed (neon) green edition...
+
+![](ethscribes/i/ethscribes.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](ethscribes/i/ethscribes@4x.png)
+
+</details>
+
+
 
 ### /sketch
 

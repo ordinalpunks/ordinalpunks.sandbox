@@ -19,7 +19,7 @@ BITMAP_PATCH = {
 
 BITMAP = {
   'Human Male 1'      => 'Male 1',
-  'Human Male 2'      => 'Male 1',
+  'Human Male 2'      => 'Male 2',
   'Human Male 3'      => 'Male 1',
   'Human Male 4'      => 'Male 1',
   'Human Male Orange' => 'Male 1',
@@ -58,7 +58,7 @@ BITMAP = {
   'Skeleton Male'  =>  'Male 1',
   'Skeleton Female'  =>  'Female 1',
 
-  'Robot Male'     =>  'Male 1',
+  'Robot Male'     =>  'Male 2',
   'Robot Female'   =>  'Female 1',
 
   'Vampire Male'     =>  'Male 1',

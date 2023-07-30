@@ -109,7 +109,7 @@ def golden( *attributes )
                                                     'Female Gold 3'
                                                    ].include?(base_golden)
 
-                                                                                  base_golden ==
+                                                                            
   golden = Punk::Image.generate( base_golden, *more_attributes, patch: GOLDEN_PATCH )
   golden
 end

@@ -85,6 +85,22 @@ Turn your "classic" ordinal punks into an all-women punkette blondes have more f
 </details>
 
 
+### /barbies
+
+Turn your "classic" ordinal punks into an all-women punkette blonde deep pink barbies...
+
+![](barbies/i/barbies.png)
+
+
+... let's try blonde pigtails...
+
+![](barbies/i/barbies-pigtails.png)
+
+
+... let's try an XL version with body and neon bra ...
+
+![](barbies/i/barbies_xl.png)
+
 
 ### /men
 

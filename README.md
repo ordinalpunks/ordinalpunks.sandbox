@@ -197,6 +197,23 @@ Turn your "classic" ordinal punks into all-laser-eyed "beam to-the-moon" superpo
 </details>
 
 
+
+### /visionpro
+
+Turn your "classic" ordinal punks into metaverse citizens 
+with vision pro mixed reality headsets...
+
+![](visionpro/i/visionpro.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](visionpro/i/visionpro@4x.png)
+
+</details>
+
+
+
 ### /saudis
 
 Turn your "classic" ordinal punks into saudi royal sheiks (and habibis)...

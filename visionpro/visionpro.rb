@@ -82,6 +82,6 @@ end
 
 
 composite.save( "./tmp/visionpro.png" )
-composite.zoom(4).save( "./tmp/visonpro@4x.png" )
+composite.zoom(4).save( "./tmp/visionpro@4x.png" )
 
 puts "bye"

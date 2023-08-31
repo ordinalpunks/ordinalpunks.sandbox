@@ -1,7 +1,4 @@
-require 'punks'
-
-
-require_relative '../utils/make'
+require 'punkmaker'
 
 
 ## using color from barbie text logo on wikipedia
@@ -22,78 +19,32 @@ colors = {
 }
 
 
-colors.each do |name, color|
-  ####
-  # robots
-  _, punk_f = make_robots( color )
+types = [
+  Punk::Robot,
+  Punk::Vampire,
+  Punk::Orc,
+  Punk::Mummy,
+  Punk::Ape,
+  Punk::Zombie,
+  Punk::Human,
+  Punk::Demon,
+  Punk::Alien,
+  Punk::Skeleton,
+]
 
-  punk_f.save( "./tmp2/robot-female_#{name}.png" )
-  punk_f.zoom(4).save( "./tmp/robot-female_#{name}@4x.png" )
 
-  ###
-  #  vampire
-  _, punk_f = make_vampires( color )
 
-  punk_f.save( "./tmp2/vampire-female_#{name}.png" )
-  punk_f.zoom(4).save( "./tmp/vampire-female_#{name}@4x.png" )
+colors.each do |color_name, color|
+  types.each do |type|
+    ## get last name e.g. Orc from Punk::Orc
+    name = type.name.split('::')[-1].downcase
+ 
+    punk_f = type.make( color, gender: 'f' )
 
-  ###
-  #  orc
-  _, punk_f = make_orcs( color )
-
-  punk_f.save( "./tmp2/orc-female_#{name}.png" )
-  punk_f.zoom(4).save( "./tmp/orc-female_#{name}@4x.png" )
-
-  ###
-  #  mummy
-  _, punk_f = make_mummies( color )
-
-  punk_f.save( "./tmp2/mummy-female_#{name}.png" )
-  punk_f.zoom(4).save( "./tmp/mummy-female_#{name}@4x.png" )
-
-  ####
-  # apes
-  _, punk_f = make_apes( color )
-
-   punk_f.save( "./tmp2/ape-female_#{name}.png" )
-   punk_f.zoom(4).save( "./tmp/ape-female_#{name}@4x.png" )
-
-  ###
-  #  zombie
-  _, punk_f = make_zombies( color )
-
-  punk_f.save( "./tmp2/zombie-female_#{name}.png" )
-  punk_f.zoom(4).save( "./tmp/zombie-female_#{name}@4x.png" )
-
-  ###
-  #  human
-  _, punk_f = make_humans( color )
-
-  punk_f.save( "./tmp2/female_#{name}.png" )
-  punk_f.zoom(4).save( "./tmp/female_#{name}@4x.png" )
-
-  ####
-  #  demons
-  _, punk_f = make_demons( color )
-
-  punk_f.save( "./tmp2/demon-female_#{name}.png" )
-  punk_f.zoom(4).save( "./tmp/demon-female_#{name}@4x.png" )
-
-  ####
-  #  aliens
-  _, punk_f = make_aliens( color )
-
-  punk_f.save( "./tmp2/alien-female_#{name}.png" )
-  punk_f.zoom(4).save( "./tmp/alien-female_#{name}@4x.png" )
-
-  #####
-  #  skeletons
-  _, punk_f = make_skeletons( color )
-
-  punk_f.save( "./tmp2/skeleton-female_#{name}.png" )
-  punk_f.zoom(4).save( "./tmp/skeleton-female_#{name}@4x.png" )
+    punk_f.save( "./tmp2/#{name}-female_#{color_name}.png" )
+    punk_f.zoom(4).save( "./tmp/#{name}-female_#{color_name}@4x.png" )
+  end
 end
-
 
 
 puts "bye"

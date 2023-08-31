@@ -1,28 +1,31 @@
-require 'pixelart'
+require 'punkmaker'
 
+
+
+
+types = [
+  Punk::Human,
+  Punk::Vampire,
+  Punk::Demon,
+  Punk::Zombie,
+  Punk::Ape,
+  Punk::Alien,
+  Punk::Orc,
+  Punk::Robot,
+  Punk::Mummy,
+  Punk::Skeleton,
+]
 
 
 composite = ImageComposite.new( 10, 2, width: 24,
                                        height: 24 )
 
+ETHSCRIBES_GREEN = Color.from_hex( '#c3ff00' )
 
-names = [
-   '', ## human
-   'vampire-',
-   'demon-',
-   'zombie-',
-   'ape-',
-   'alien-',
-   'orc-',
-   'robot-',
-   'mummy-',
-   'skeleton-',
-]
-
-['male', 'female'].each do |gender|
-   names.each do |name|
-       path = "./more/#{name}#{gender}_green.png"
-       composite << Image.read( path )
+['m', 'f'].each do |gender|
+  types.each do |type|
+    punk = type.make( ETHSCRIBES_GREEN, gender: gender )
+    composite << punk
    end
 end    
 

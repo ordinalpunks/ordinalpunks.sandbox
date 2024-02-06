@@ -76,6 +76,7 @@ ids.each do |id|
 
   punk.save( "./tmp2/visionpro-#{id+1}.png" )
   punk.zoom(4).save( "./tmp2/visionpro-#{id+1}@4x.png" )
+  punk.zoom(8).save( "./tmp2/visionpro-#{id+1}@8x.png" )
 
   composite << punk
 end

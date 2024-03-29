@@ -28,8 +28,6 @@ COIN_FRAME_BACK    = Image.read( "./bronzecoin-32x32-back.png" )
 
 def mint( punk, id: )
   ## change to coin color palette
-  coin = Image.new( 32, 32 )
-
   base = punk.change_palette8bit( COIN_PALETTE )
   base.zoom(8).save( "./ordzaar/tmp/base#{id+1}@8x.png" )
 

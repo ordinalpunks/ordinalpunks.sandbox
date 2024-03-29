@@ -1,11 +1,21 @@
 #####
 #  to run use:
-#    $   ruby ./goldcoins.rb
+#    $   ruby ./goldcoins_v0.rb
 
 
-$LOAD_PATH.unshift( '../../../learnpixelart/pixelart/pixelart/lib' )
+##
+# to be done:
+#   check for alpha channel e.g. pipe smoke  (gets gray-ish) - why?
+
+
 require 'punks'
 
+
+
+
+puts "colors:"
+puts Color.format( Color.parse(  '#f2af39' ))
+#=> #f2af39 / rgb(242 175  57) - hsl( 38°  88%  59%) - hsv( 38°  76%  95%)
 
 
 # note: use dark to light
@@ -25,26 +35,18 @@ COIN_FRAME   = Image.read( "./goldcoin-32x32.png" )
 COIN_FRAME_FRONT   = Image.read( "./goldcoin-32x32-front.png" )
 COIN_FRAME_BACK    = Image.read( "./goldcoin-32x32-back.png" )
 
+puts "   #{COIN_FRAME.width}x#{COIN_FRAME.height}"
 
 
-def mint( punk, id:  )
+def mint( punk )
   ## change to coin color palette
-  base = punk.change_palette8bit( COIN_PALETTE )
-  base.zoom(8).save( "./ordzaar2/tmp/base#{id+1}@8x.png" )
-
   coin = Image.new( 32, 32 )
   coin.compose!( COIN_FRAME_BACK )
-  coin.compose!( base, 5, 3 )
+  coin.compose!( punk.change_palette8bit( COIN_PALETTE ), 5, 3 )
   coin.compose!( COIN_FRAME_FRONT )
   coin
 end
 
-
-##
-# add logo
-punk = Punk::Image.generate( 'ape gold', 'laser eyes' )
-coin = mint( punk, id: 0 )
-coin.save( "./ordzaar2/tmp/profile.png" )
 
 
 
@@ -73,12 +75,38 @@ end
 
 
 
+###
+#  generate (preview strips)
+
+composite = ImageComposite.new( 3, 4, width:  32+4,
+                                      height: 32+4 )
+
+
+ids = (0..11)
+pp ids
+
+ids.each do |id|
+  attributes = rec_to_attributes( recs[id] )
+  pp attributes
+
+  punk = Punk::Image.generate( *attributes )
+
+  coin = mint( punk )
+
+
+  tile = Image.new( 32+4, 32+4 )
+  tile.compose!( coin, 2, 2 )  ## add 2/2 padding
+  composite << tile
+end
+
+
+composite.save( "./tmp/goldcoins-strip.png" )
+composite.zoom(4).save( "./tmp/goldcoins-strip@4x.png" )
+
+
+
 composite = ImageComposite.new( 10, 10, width:  32,
                                         height: 32 )
-
-banner = ImageComposite.new( 20, 5,  width:  32,
-                                     height: 32, background: '#000000' )
-
 
 ids = (0..99)
 ids.each do |id|
@@ -87,25 +115,16 @@ ids.each do |id|
 
   punk = Punk::Image.generate( *attributes )
 
-  coin = mint( punk, id: id )
+  coin = mint( punk )
 
-  num = '%02d' % id
-  coin.save( "./ordzaar2/goldcoin#{num}.png" )
-  coin.zoom(8).save( "./ordzaar2/@8x/goldcoin#{num}@8x.png" )
+  coin.save( "./i/goldcoin-#{id+1}.png" )
+  coin.zoom(4).save( "./i/goldcoin-#{id+1}@4x.png" )
 
   composite << coin
-  banner << coin
 end
 
 
-composite.save( "./ordzaar2/goldcoins.png" )
-composite.zoom(2).save( "./ordzaar2/goldcoins@2x.png" )
-composite.zoom(4).save( "./ordzaar2/goldcoins@4x.png" )
-
-banner.save( "./ordzaar2/tmp/banner.png" )
-banner.zoom(2).save( "./ordzaar2/tmp/banner@2x.png" )
-banner.zoom(3).save( "./ordzaar2/tmp/banner@3x.png" )
-banner.zoom(4).save( "./ordzaar2/tmp/banner@4x.png" )
+composite.save( "./tmp/goldcoins.png" )
 
 
 puts "bye"

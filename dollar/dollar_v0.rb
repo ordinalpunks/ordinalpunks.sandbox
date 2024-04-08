@@ -3,7 +3,7 @@
 #    $   ruby ./dollar.rb
 
 
-$LOAD_PATH.unshift( '../../../learnpixelart/pixelart/pixelart/lib' )
+
 require 'punks'
 
 
@@ -44,14 +44,11 @@ DOLLAR_FRAME   = Image.read( "./dollar.png" )
 puts "   #{DOLLAR_FRAME.width}x#{DOLLAR_FRAME.height}"
 
 
-def dollarize( punk, id: )
+def dollarize( punk )
   ## change to greenback color palette
-  base = punk.change_palette8bit( DOLLAR_PALETTE )
-  base.zoom(8).save( "./ordzaar/tmp/base#{id+1}@8x.png" )
-
   dollar = Image.new( DOLLAR_FRAME.width, DOLLAR_FRAME.height )
   dollar.compose!( DOLLAR_FRAME )
-  dollar.compose!( base, 16, 0 )
+  dollar.compose!( punk.change_palette8bit( DOLLAR_PALETTE ), 16, 0 )
   dollar
 end
 
@@ -83,27 +80,17 @@ end
 
 
 
-##
-# add logo
-
-punk = Punk::Image.generate( 'ape gold', 'laser eyes' )
-dollar = dollarize( punk, id: 0 )
-dollar.save( "./ordzaar/tmp/profile.png" )
 
 
+###
+#  generate (preview strips)
 
-composite = ImageComposite.new( 10, 10, width:  DOLLAR_FRAME.width+4,
-                                        height: DOLLAR_FRAME.height+4,
-                                        background: '#000000' )
-
-
-banner = ImageComposite.new( 20, 5,  width:  DOLLAR_FRAME.width+4,
-                                     height: DOLLAR_FRAME.height+4,
-                                     background: '#000000' )
+composite = ImageComposite.new( 3, 4, width:  DOLLAR_FRAME.width+4,
+                                      height: DOLLAR_FRAME.height+4,
+                                      background: '#ffffff' )
 
 
-
-ids = (0..99)
+ids = (0..11)
 pp ids
 
 ids.each do |id|
@@ -112,31 +99,45 @@ ids.each do |id|
 
   punk = Punk::Image.generate( *attributes )
 
-  dollar = dollarize( punk, id: id )
-
-
-  num = '%02d' % id
-  dollar.save( "./ordzaar/greenback#{num}.png" )
-  dollar.zoom(8).save( "./ordzaar/@8x/greenback#{num}@8x.png" )
-
+  dollar = dollarize( punk )
 
   tile = Image.new( DOLLAR_FRAME.width+4, DOLLAR_FRAME.height+4 )
   tile.compose!( dollar, 2, 2 )  ## add 2/2 padding
   composite << tile
-  banner    << tile
 end
 
 
-composite.save( "./ordzaar/greenbacks.png" )
-composite.zoom(2).save( "./ordzaar/greenbacks@2x.png" )
-composite.zoom(4).save( "./ordzaar/greenbacks@4x.png" )
+composite.save( "./tmp/dollars-strip.png" )
+composite.zoom(4).save( "./tmp/dollars-strip@4x.png" )
 
 
-banner.save( "./ordzaar/tmp/banner.png" )
-banner.zoom(2).save( "./ordzaar/tmp/banner@2x.png" )
-banner.zoom(3).save( "./ordzaar/tmp/banner@3x.png" )
-banner.zoom(4).save( "./ordzaar/tmp/banner@4x.png" )
 
+composite = ImageComposite.new( 10, 10, width:  DOLLAR_FRAME.width,
+                                        height: DOLLAR_FRAME.height )
+
+###
+#  note: ids are off-by-one (starting at zero NOT one), sorry!
+
+# ids = [29, 45, 54, 65, 69, 77, 92, 94]
+ids = (0..99)
+ids.each do |id|
+  attributes = rec_to_attributes( recs[id] )
+  pp attributes
+
+  punk = Punk::Image.generate( *attributes )
+
+  ## change to greenback color palette
+  dollar = dollarize( punk )
+
+  dollar.save( "./tmp/dollar-#{id+1}.png" )
+  dollar.zoom(4).save( "./tmp/dollar-#{id+1}@4x.png" )
+  ## dollar.zoom(8).save( "./tmp/dollar-#{id+1}@8x.png" )
+
+  composite << dollar
+end
+
+
+composite.save( "./tmp/dollars.png" )
 
 
 puts "bye"

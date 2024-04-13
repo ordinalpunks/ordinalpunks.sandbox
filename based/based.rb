@@ -65,6 +65,7 @@ end
 
 
 
+
 ####
 #  read in ordinals metadata
 recs = read_csv( "../ordinalpunks_v2.csv" )
@@ -93,8 +94,12 @@ end
 #  generate 
 
 
-composite = ImageComposite.new( 10, 10, width:  CIRCLE_FRAME.width+4*4*2,
-                                        height: CIRCLE_FRAME.width+4*4*2 )
+composite  = ImageComposite.new( 10, 10, width:  CIRCLE_FRAME.width+4*4*2,
+                                         height: CIRCLE_FRAME.width+4*4*2 )
+
+composite2 = ImageComposite.new( 10, 10, width:  CIRCLE_FRAME.width+4*4*2,
+                                         height: CIRCLE_FRAME.width+4*4*2 )
+
 
 ids = (0..99)
 ids.each do |id|
@@ -103,18 +108,24 @@ ids.each do |id|
 
   punk = Punk::Image.generate( *attributes )
 
-  based = mint( punk )
   num = '%02d' % id
+  based = mint( punk )
   based.save( "./tmp/based#{num}.png" )
   based.zoom(4).save( "./tmp/based#{num}@4x.png" )
-
   composite << based
+
+  based = mint( punk.silhouette )
+  based.save( "./tmp2/based_shadow#{num}.png" )
+  based.zoom(4).save( "./tmp2/based_shadow#{num}@4x.png" )
+  composite2 << based
 end
 
 
 composite.save( "./tmp/based.png" )
 composite.zoom(2).save( "./tmp/based@2x.png" )
 
+composite2.save( "./tmp/based_shadow.png" )
+composite2.zoom(2).save( "./tmp/based_shadow@2x.png" )
 
 
 puts "bye"
